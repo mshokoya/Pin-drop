@@ -1,3 +1,6 @@
+import {IUserModel} from '../../../database';
+import {Response} from 'express';
+
 export interface RegisterInput {
   input: {
     email: string;
@@ -10,4 +13,11 @@ export interface LoginInput {
     email: string;
     password: string;
   }
+}
+
+export interface IloginViaPinDrop {
+  email: string;
+  res: Response;
+  token: string;
+  db: IUserModel;
 }

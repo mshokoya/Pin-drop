@@ -1,13 +1,17 @@
 import {Schema, model} from 'mongoose';
-import {IUserDoc} from './types';
+import {IUserDoc, IUserModel} from './types';
 import {toHash} from '../utils/hash';
+
+
 
 const userSchema = new Schema({
   name: {
     type: String
   },
   username: {
-    type: String
+    type: String,
+    required: true,
+    unique: true
   },
   email: {
     type: String,
@@ -55,6 +59,10 @@ userSchema.pre<IUserDoc>('save', async function(){
   }
 });
 
-const Users = model<IUserDoc>('Users', userSchema)
+userSchema.statics.build = function(attrs: IUserDoc): IUserDoc{
+  return new Users(attrs);
+}
+
+const Users = model<IUserDoc, IUserModel>('Users', userSchema)
 
 export {Users};

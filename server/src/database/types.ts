@@ -15,12 +15,25 @@ export interface IUserDoc extends mongoose.Document {
   name?: string;
   username: string;
   avatar?: string;
-  salt: string;
   comments?: ICommentDoc['_id'];
   pins?: IPinDoc['_id'];
   accountType: AccountType;
   token?: string;
 }
 
+export interface IUserAttrs {
+  email: string;
+  password: string;
+  name?: string;
+  username: string;
+  avatar?: string;
+  comments?: ICommentDoc['_id'];
+  pins?: IPinDoc['_id'];
+  accountType: AccountType;
+  token?: string;
+}
 
+export interface IUserModel extends mongoose.Model<IUserDoc> {
+  build(atts: IUserAttrs): IUserDoc
+}
 

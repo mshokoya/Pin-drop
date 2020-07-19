@@ -22,7 +22,7 @@ export const typeDefs = gql`
   }
 
 
-
+  
   type Mutation {
     register(input: RegisterInput): Status!
   }

@@ -5,7 +5,7 @@ import {RegisterInput, LoginInput} from './types';
 import {Status, Viewer} from '../../../utils/types';
 import {validateEmail} from '../../../utils/validate';
 import {randomBytes} from 'crypto';
-import {loginViaPinDrop} from './auth_helpers';
+import {loginViaPinDrop} from './auth-helpers';
 
 
 

@@ -9,14 +9,10 @@
     "start:watch": "dotenv -e ./env/.env-prod nodemon src/index.ts",
     "dev:watch": "dotenv -e ./env/.env-dev nodemon ./src/index.ts",
     "build": "tsc -p ./",
-    "test": "jest",
+    "test": "dotenv -e ./env/.env-prod jest",
     "test:watch": "jest --watchAll --no-cache",
     "lint": "eslint ./src --ext .ts",
     "lint:fix": "eslint ./src --ext .ts --fix"
-  },
-  "jest": {
-    "preset": "ts-jest",
-    "testEnvironment": "node"
   },
   "husky": {
     "hooks": {
@@ -29,16 +25,18 @@
     "@types/compression": "^1.7.0",
     "@types/cookie-parser": "^1.4.2",
     "@types/express": "^4.17.7",
+    "@types/jest": "^26.0.5",
     "@types/jsonwebtoken": "^8.5.0",
     "@types/mongoose": "^5.7.31",
     "@types/node": "^14.0.23",
     "@typescript-eslint/eslint-plugin": "^3.6.1",
     "@typescript-eslint/parser": "^3.6.1",
+    "apollo-server-testing": "^2.16.0",
     "eslint": "^7.4.0",
-    "eslint-config-airbnb-typescript": "^8.0.2",
     "eslint-plugin-import": "^2.22.0",
     "husky": "^4.2.5",
     "jest": "^26.1.0",
+    "mongodb-memory-server": "^6.6.1",
     "nodemon": "^2.0.4",
     "ts-jest": "^26.1.3",
     "ts-node": "^8.10.2",

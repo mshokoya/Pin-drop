@@ -22,4 +22,4 @@ const GQL_OPTS = {
 
 // eslint-disable-next-line 
 const server = (new ApolloServer(GQL_OPTS)) as any; //temp fix
-global.ApolloTestServer = createTestClient(server);
+global.ApolloTestServer = createTestClient(server) as ApolloServerTestClient;

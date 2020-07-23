@@ -22,6 +22,12 @@ export const userResolver: IResolvers = {
           throw new Error('Password must be more than 5 characters');
         }
 
+        const isValidEmail = validateEmail(email);
+
+        if (!isValidEmail){
+          throw new Error('Invalid email');
+        }
+
         const existingUser = Users.findOne({email});
   
         if (existingUser) {
@@ -61,7 +67,7 @@ export const userResolver: IResolvers = {
 
         const isValidEmail = validateEmail(email);
         if (!isValidEmail){
-          throw new Error('Invalid email.');
+          throw new Error('Invalid email');
         }
 
         const token = randomBytes(16).toString('hex');

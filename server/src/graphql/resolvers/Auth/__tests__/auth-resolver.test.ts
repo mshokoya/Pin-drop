@@ -1,9 +1,15 @@
-import {Users} from '../../../../database';
+// eslint-disable-next-line
+// @ts-nocheck
+
+import {Users, AccountType} from '../../../../database';
 import {userResolver} from '../index';
 
-jest.mock('../../../../database');
+//find a way to test Users.save (Users.build().save())
+// build is already mocked; find out how to access jest.fn inside a jest.fn
 
-Users.build = jest.fn().mockReturnValueOnce({save: () => jest.fn().mockReturnValueOnce({})})
+jest.mock('../../../../database/users');
+const save = jest.fn().mockReturnValue({})
+Users.build = jest.fn().mockReturnValue({save})
 Users.findOne = jest.fn()
 
 const user = {
@@ -11,50 +17,77 @@ const user = {
   password: 'thisisatestpassword',
 }
 
-describe('Auth resolver unit test', () => {
+describe('Auth resolver unit tests', () => {
   let resolver;
   afterEach(() => {
-    jest.clearAllMocks()
+    // jest.clearAllMocks()
   })
-  describe('Mutation resolver (register)', () => {
-    it('should throw error if password length < 5', async () => {
-      // eslint-disable-next-line
-      // @ts-ignore
-      await expect(userResolver.Mutation.register(undefined, {
-        input: {
-          password: 'w', //  <-- Test case 
-          email: 'mayo_s@hotmail.co.uk',
-        }
-      })).rejects.toThrowError("Failed to register account: Password must be more than 5 characters")
-      expect(Users.findOne).not.toBeCalled()
-      expect(Users.build).not.toBeCalled()
-    });
+  describe('Mutation resolver', () => {
+    describe('Register', () => {
+    // ========== Failure case ==========
 
-    it.skip('should throw error if email is incorrect', async () => {
-      // eslint-disable-next-line
-      // @ts-ignore
-      await expect(userResolver.Mutation.register(undefined, {
-        input: {
-          password: 'wwjsdlajdasd',
-          email: 'edklmdklamw' //  <-- Test case 
-        }
-      })).rejects.toThrowError('') //  <-- input error message 
-      expect(Users.findOne).not.toBeCalled()
-      expect(Users.build).not.toBeCalled()
-    });
-
-    it('should return {success: true} if all arguments are entered correctly', async () => {
-      // eslint-disable-next-line
-      // @ts-ignore
-      resolver = await userResolver.Mutation.register(undefined, {
-        input: user
+      it('should throw error if password length < 5', async () => {
+        await expect(userResolver.Mutation.register(undefined, {
+          input: {
+            password: 'w', //  <-- Test case 
+            email: 'mayo_s@hotmail.co.uk',
+          }
+        })).rejects.toThrowError("Failed to register account: Password must be more than 5 characters")
+        expect(Users.findOne).not.toBeCalled()
+        expect(Users.build).not.toBeCalled()
       });
-      expect(resolver).toEqual({success:true});
-      expect(Users.findOne).toHaveBeenCalledTimes(1);
-      expect(Users.findOne).toHaveBeenCalledTimes(1);
+  
+      it('should throw error if email is incorrect', 
+      async () => {
+        await expect(userResolver.Mutation.register(undefined, {
+          input: {
+            password: 'wwjsdlajdasd',
+            email: 'edklmdklamw' //  <-- Test case 
+          }
+        })).rejects.toThrowError('Failed to register account: Invalid email');
+        expect(Users.findOne).not.toBeCalled()
+        expect(Users.build).not.toBeCalled()
+      }
+      );
 
-    })
+      it('should fail id Users.findOne mock return a value', async () => {
+        Users.findOne = jest.fn(() => user) // DB MOCK MODIFICATION (REMEMBER TO RESET ITS RETURN VALUE)
 
+        await expect(
+          userResolver.Mutation.register(undefined, {input: user})
+        ).rejects.toThrowError('Failed to register account: Email already in use');
+        expect(Users.findOne).toHaveBeenCalledTimes(1);
+        expect(Users.findOne).toHaveBeenCalledWith({email: user.email})
+        expect(Users.build).not.toBeCalled();
+
+        Users.findOne = jest.fn() // DB MOCK RESET
+      });
+      
+    // ========== Success case ==========
+
+      it('should return {success: true} if all arguments are entered correctly', async () => {
+        resolver = await userResolver.Mutation.register(undefined, {
+          input: user
+        });
+        expect(resolver).toEqual({success:true});
+        expect(Users.findOne).toHaveBeenCalledTimes(1);
+        expect(Users.findOne).toHaveBeenCalledWith({email: user.email})
+        expect(Users.build).toHaveBeenCalledTimes(1);
+        expect(Users.build).toHaveBeenCalledWith({
+          ...user, 
+          accountType: AccountType.PinDrop,
+          username: user.email.split('@')[0]
+        });
+      });
+    });
   });
+
+  // describe('Query resolver', () => {
+  //   describe('Login', () => {
+  //     it('should ', () => {
+
+  //     });
+  //   })
+  // });
 
 });

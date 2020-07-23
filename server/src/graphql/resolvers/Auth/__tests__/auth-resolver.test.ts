@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 // @ts-nocheck
 import {Users} from '../../../../database';
 import {userResolver} from '../index';

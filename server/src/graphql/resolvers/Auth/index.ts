@@ -18,7 +18,7 @@ export const userResolver: IResolvers = {
       try {
         const {email, password} = input;
 
-        const existingUser = await Users.findOne({email});
+        const existingUser = Users.findOne({email});
   
         if (existingUser) {
           throw new Error('Email already in use');

@@ -18,14 +18,14 @@ export const userResolver: IResolvers = {
       try {
         const {email, password} = input;
 
+        if (password.length < 5) {
+          throw new Error('Password must be more than 5 characters');
+        }
+
         const existingUser = Users.findOne({email});
   
         if (existingUser) {
           throw new Error('Email already in use');
-        }
-
-        if (password.length < 5) {
-          throw new Error('Password must be more than 5 characters');
         }
 
         // upon registration use username will be first part of email
@@ -45,7 +45,7 @@ export const userResolver: IResolvers = {
         }
 
       } catch (error) {
-        console.error(error);
+        // console.error(error);
         throw new Error(`Failed to register account: ${error.message}`);
       }
     }

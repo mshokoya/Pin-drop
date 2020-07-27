@@ -2,9 +2,15 @@
 // @ts-nocheck
 import {Users, AccountType} from '../../../../database';
 import {userResolver} from '../index';
-// import {loginViaPinDrop} from '../auth-helpers';
+import {loginViaPinDrop} from '../auth-helpers';
 
-// DB Mock
+const user = {
+  email: 'mayo_s@hotmail.co.uk',
+  password: 'thisisatestpassword',
+}
+
+
+// ========== Mocks ==========
 jest.mock('../../../../database/users', () => {
   return {
     __esModule: true,
@@ -17,27 +23,27 @@ jest.mock('../../../../database/users', () => {
   }
 });
 
-// loginViaPinDrop Mock
-jest.mock('../auth-helpers');
-// login
+jest.mock('../auth-helpers', () => {
+  return {
+    __esModule: true,
+    loginViaPinDrop: jest.fn(() => ({
+      email: user.email,
+      username: user.email.split('@')[0]
+    }))
+  }
+})
 
-
-
-const user = {
-  email: 'mayo_s@hotmail.co.uk',
-  password: 'thisisatestpassword',
-}
-
+// ========== Tests ==========
 describe('Auth resolver unit tests', () => {
   let resolver;
-  afterEach(() => {
-    // jest.clearAllMocks()
-  });
 
+  afterEach(() => {
+    jest.clearAllMocks()
+  });
+  // ========== Mutations tests ==========
   describe('Mutation resolver', () => {
     describe('Register', () => {
     // ========== Failure case ==========
-
       it('should throw error if password length < 5', async () => {
         await expect(userResolver.Mutation.register(undefined, {
           input: {
@@ -76,12 +82,11 @@ describe('Auth resolver unit tests', () => {
       });
       
     // ========== Success case ==========
-
       it('should return {success: true} if all arguments are entered correctly', async () => {
-        resolver = await userResolver.Mutation.register(undefined, {
-          input: user
-        });
-        expect(resolver).toEqual({success:true});
+        
+        await expect(
+          userResolver.Mutation.register(undefined, {input: user})
+        ).resolves.toEqual({success:true});
         expect(Users.findOne).toHaveBeenCalledTimes(1);
         expect(Users.findOne).toHaveBeenCalledWith({email: user.email})
         expect(Users.build).toHaveBeenCalledTimes(1);
@@ -95,18 +100,22 @@ describe('Auth resolver unit tests', () => {
     });
   });
 
-  // describe('Query resolver', () => {
-  //   describe('Login', () => {
-  //     it('should throw error if email is invalid', async () => {
-  //       await expect(
-  //         userResolver.Query.login(undefined, {input: user}, {res: {}})
-  //       ).rejects.toEqual({email: 'mayo_s@hotmail.co.uk', username: 'mayo_s'})
-  //     });
+  // ========== Queries tests ==========
+  describe('Query resolver', () => {
+    describe('Login', () => {
 
-  //     it.todo('it should throw error if username is invalid')
+      it.todo('should throw error if email is invalid');
 
-  //     it.todo('should return username & email with input is correct')
-  //   });
-  // });
+      it.todo('it should throw error if username is invalid');
+
+
+      it('should return username & email when input is correct', async () => {
+        await expect(
+          userResolver.Query.login(undefined, {input: user}, {res: {}})
+        ).resolves.toEqual({email: 'mayo_s@hotmail.co.uk', username: 'mayo_s'})
+      });
+      
+    });
+  });
 
 });

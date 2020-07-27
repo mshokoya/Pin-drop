@@ -2,7 +2,7 @@
 // @ts-nocheck
 import {Users, AccountType} from '../../../../database';
 import {userResolver} from '../index';
-import {loginViaPinDrop} from '../auth-helpers';
+// import {loginViaPinDrop} from '../auth-helpers';
 
 const user = {
   email: 'mayo_s@hotmail.co.uk',
@@ -34,9 +34,8 @@ jest.mock('../auth-helpers', () => {
 })
 
 // ========== Tests ==========
-describe('Auth resolver unit tests', () => {
-  let resolver;
 
+describe('Auth resolver unit tests', () => {
   afterEach(() => {
     jest.clearAllMocks()
   });

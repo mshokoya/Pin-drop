@@ -1,16 +1,27 @@
 // eslint-disable-next-line
 // @ts-nocheck
-
 import {Users, AccountType} from '../../../../database';
 import {userResolver} from '../index';
+// import {loginViaPinDrop} from '../auth-helpers';
 
-//find a way to test Users.save (Users.build().save())
-// build is already mocked; find out how to access jest.fn inside a jest.fn
+// DB Mock
+jest.mock('../../../../database/users', () => {
+  return {
+    __esModule: true,
+    Users: {
+      build: jest.fn().mockReturnValue({
+        save: jest.fn() // <-- inorder to access save in test.. build must be called (Users.build().save)
+      }),
+      findOne: jest.fn()
+    }
+  }
+});
 
-jest.mock('../../../../database/users');
-const save = jest.fn().mockReturnValue({})
-Users.build = jest.fn().mockReturnValue({save})
-Users.findOne = jest.fn()
+// loginViaPinDrop Mock
+jest.mock('../auth-helpers');
+// login
+
+
 
 const user = {
   email: 'mayo_s@hotmail.co.uk',
@@ -21,7 +32,8 @@ describe('Auth resolver unit tests', () => {
   let resolver;
   afterEach(() => {
     // jest.clearAllMocks()
-  })
+  });
+
   describe('Mutation resolver', () => {
     describe('Register', () => {
     // ========== Failure case ==========
@@ -78,16 +90,23 @@ describe('Auth resolver unit tests', () => {
           accountType: AccountType.PinDrop,
           username: user.email.split('@')[0]
         });
+        expect(Users.build().save).toBeCalledTimes(1);
       });
     });
   });
 
   // describe('Query resolver', () => {
   //   describe('Login', () => {
-  //     it('should ', () => {
-
+  //     it('should throw error if email is invalid', async () => {
+  //       await expect(
+  //         userResolver.Query.login(undefined, {input: user}, {res: {}})
+  //       ).rejects.toEqual({email: 'mayo_s@hotmail.co.uk', username: 'mayo_s'})
   //     });
-  //   })
+
+  //     it.todo('it should throw error if username is invalid')
+
+  //     it.todo('should return username & email with input is correct')
+  //   });
   // });
 
 });

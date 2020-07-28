@@ -2,13 +2,12 @@
 // @ts-nocheck
 import {Users, AccountType} from '../../../../database';
 import {userResolver} from '../index';
-// import {loginViaPinDrop} from '../auth-helpers';
+import {loginViaPinDrop} from '../auth-helpers';
 
 const user = {
   email: 'mayo_s@hotmail.co.uk',
   password: 'thisisatestpassword',
 }
-
 
 // ========== Mocks ==========
 jest.mock('../../../../database/users', () => {
@@ -54,8 +53,7 @@ describe('Auth resolver unit tests', () => {
         expect(Users.build).not.toBeCalled()
       });
   
-      it('should throw error if email is incorrect', 
-      async () => {
+      it('should throw error if email is incorrect', async () => {
         await expect(userResolver.Mutation.register(undefined, {
           input: {
             password: 'wwjsdlajdasd',
@@ -103,15 +101,24 @@ describe('Auth resolver unit tests', () => {
   describe('Query resolver', () => {
     describe('Login', () => {
 
-      it.todo('should throw error if email is invalid');
+      it('should throw error if email is invalid', async () => {
+        const user = {
+          email: 'incorrectemail.co.uk',
+          password: 'dasdsddasd'
+        }
+        await expect(
+          userResolver.Query.login(undefined, {input: user}, {res: {}})
+        ).rejects.toThrowError('Failed to login: Invalid email');
+        expect(loginViaPinDrop).not.toHaveBeenCalled();
+      });
 
       it.todo('it should throw error if username is invalid');
-
 
       it('should return username & email when input is correct', async () => {
         await expect(
           userResolver.Query.login(undefined, {input: user}, {res: {}})
-        ).resolves.toEqual({email: 'mayo_s@hotmail.co.uk', username: 'mayo_s'})
+        ).resolves.toEqual({email: 'mayo_s@hotmail.co.uk', username: 'mayo_s'});
+        expect(loginViaPinDrop).toHaveBeenCalledTimes(1);
       });
       
     });

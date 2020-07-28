@@ -51,7 +51,6 @@ export const userResolver: IResolvers = {
         }
 
       } catch (error) {
-        // console.error(error);
         throw new Error(`Failed to register account: ${error.message}`);
       }
     }
@@ -80,7 +79,6 @@ export const userResolver: IResolvers = {
         } 
 
       } catch (error) {
-        console.log(error);
         throw new Error(`Failed to login: ${error.message}`);
       }
     }

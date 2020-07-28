@@ -5,5 +5,5 @@ module.exports = {
   setupFilesAfterEnv: [
     "./src/test/setup.ts"
   ],
-  unmockedModulePathPatterns: ["/(?:\.spec\.ts)/"],
+  // unmockedModulePathPatterns: ["/(?:\.spec\.ts)/"],
 };

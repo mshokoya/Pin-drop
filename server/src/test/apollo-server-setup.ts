@@ -1,7 +1,6 @@
 import {createTestClient, ApolloServerTestClient} from 'apollo-server-testing';
 import {ApolloServer} from 'apollo-server-express';
 import {typeDefs, resolvers} from '../graphql';
-import {Request, Response} from 'express'
 
 declare global {
   // eslint-disable-next-line
@@ -12,12 +11,16 @@ declare global {
   }
 }
 
+export const requestMock = jest.fn()
+
+export const responseMock = {
+  cookie: jest.fn()
+}
+
 const GQL_OPTS = {
   typeDefs, 
   resolvers, 
-  context: (
-    {req, res}: {req: Request, res: Response}) => ({req, res}
-  )
+  context: () => ({req: requestMock, res: responseMock})
 }
 
 // eslint-disable-next-line 

@@ -62,7 +62,7 @@ export const userResolver: IResolvers = {
       {res}: {res: Response}
     ): Promise<Viewer> => {
       try {
-        const {email} = input;
+        const {email, password} = input;
 
         const isValidEmail = validateEmail(email);
         if (!isValidEmail){
@@ -71,12 +71,12 @@ export const userResolver: IResolvers = {
 
         const token = randomBytes(16).toString('hex');
         
-        const user = await loginViaPinDrop({email, res, db:Users, token})
+        const user = await loginViaPinDrop({email,password, res, db:Users, token});
 
         return {
           email: user.email,
           username: user.username,
-          token: user.token!
+          token: token // remove eslint error "no-non-null-assertion" and change to "user.token!"
         } 
 
       } catch (error) {

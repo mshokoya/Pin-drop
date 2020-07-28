@@ -17,6 +17,7 @@ export interface LoginInput {
 
 export interface IloginViaPinDrop {
   email: string;
+  password: string;
   res: Response;
   token: string;
   db: IUserModel;

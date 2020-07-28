@@ -9,7 +9,7 @@
     "start:watch": "dotenv -e ./env/.env-prod nodemon src/index.ts",
     "dev:watch": "dotenv -e ./env/.env-dev nodemon ./src/index.ts",
     "build": "tsc -p ./",
-    "test": "dotenv -e ./env/.env-prod jest",
+    "test": "dotenv -e ./env/.env-dev jest",
     "test:watch": "jest --watchAll --no-cache",
     "lint": "eslint ./src --ext .ts",
     "lint:fix": "eslint ./src --ext .ts --fix"

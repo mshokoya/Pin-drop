@@ -14,7 +14,7 @@ const registerQuery = gql`
   }
 `
 
-const {query, mutate} = global.ApolloTestServer;
+const { mutate} = global.ApolloTestServer;
 
 describe('Auth resolver integration test', () => {
   describe('Mutations resolver', () => {
@@ -48,13 +48,4 @@ describe('Auth resolver integration test', () => {
       });
     });
   });
-
-  // describe('Query resolver', () => {
-  //   describe('login', () => {
-  //     it('should throw error is email is not found', async () => {
-  //       const res = await 
-  //     });
-
-  //   });
-  // })
 });

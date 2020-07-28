@@ -1,5 +1,10 @@
 import {gql} from 'apollo-server-express';
 
+const user = {
+  email: 'mayo_s@hotmail.co.uk',
+  password: 'testpassword'
+}
+
 
 const registerQuery = gql`
   mutation($input: RegisterInput){
@@ -9,7 +14,8 @@ const registerQuery = gql`
   }
 `
 
-const { mutate} = global.ApolloTestServer;
+const {query, mutate} = global.ApolloTestServer;
+
 describe('Auth resolver integration test', () => {
   describe('Mutations resolver', () => {
     describe('register', () => {
@@ -21,18 +27,34 @@ describe('Auth resolver integration test', () => {
           }
         });
 
-        const error = res.errors && res.errors[0].message;
+        const error = res.errors && res.errors[0].message
+        const data = res.data
   
         expect(error).toEqual('Failed to register account: Invalid email');
+        expect(res.data).toBeNull();
       });
 
-      // it('should return ')
+      it('should return return {success: true} if valid params are provided', async () => {
+        const res = await mutate({mutation: registerQuery, variables: {
+          input: user
+        }});
+
+        const data = res.data?.register;
+        const error = res.errors && res.errors[0].message
+
+        expect(data).toEqual({success: true});
+        expect(error).toBeUndefined();
+
+      });
     });
   });
 
   // describe('Query resolver', () => {
   //   describe('login', () => {
-      
+  //     it('should throw error is email is not found', async () => {
+  //       const res = await 
+  //     });
+
   //   });
   // })
 });

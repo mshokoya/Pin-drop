@@ -83,7 +83,7 @@ describe('Auth resolver unit tests', () => {
         
         await expect(
           userResolver.Mutation.register(undefined, {input: user})
-        ).resolves.toEqual({success:true});
+        ).resolves.toMatchObject({success:true});
         expect(Users.findOne).toHaveBeenCalledTimes(1);
         expect(Users.findOne).toHaveBeenCalledWith({email: user.email})
         expect(Users.build).toHaveBeenCalledTimes(1);
@@ -117,7 +117,7 @@ describe('Auth resolver unit tests', () => {
       it('should return username & email when input is correct', async () => {
         await expect(
           userResolver.Query.login(undefined, {input: user}, {res: {}})
-        ).resolves.toEqual({email: 'mayo_s@hotmail.co.uk', username: 'mayo_s'});
+        ).resolves.toMatchObject({email: 'mayo_s@hotmail.co.uk', username: 'mayo_s'});
         expect(loginViaPinDrop).toHaveBeenCalledTimes(1);
       });
       

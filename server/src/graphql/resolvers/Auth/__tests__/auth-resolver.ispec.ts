@@ -31,7 +31,7 @@ describe('Auth resolver integration test', () => {
         const data = res.data
   
         expect(error).toEqual('Failed to register account: Invalid email');
-        expect(res.data).toBeNull();
+        expect(data).toBeNull();
       });
 
       it('should return return {success: true} if valid params are provided', async () => {

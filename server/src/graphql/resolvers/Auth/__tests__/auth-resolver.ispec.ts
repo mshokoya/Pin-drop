@@ -14,7 +14,17 @@ const registerQuery = gql`
   }
 `
 
-const { mutate} = global.ApolloTestServer;
+const loginQuery = gql`
+  query($input: LoginInput){
+    login(input: $input){
+      email
+      username
+      token
+    }
+  }
+`
+
+const {query, mutate} = global.ApolloTestServer;
 
 describe('Auth resolver integration test', () => {
   describe('Mutations resolver', () => {
@@ -27,11 +37,11 @@ describe('Auth resolver integration test', () => {
           }
         });
 
-        const error = res.errors && res.errors[0].message
-        const data = res.data
+        const error = res.errors && res.errors[0].message;
+        const data = res.data?.register;
   
         expect(error).toEqual('Failed to register account: Invalid email');
-        expect(data).toBeNull();
+        expect(data).toBeUndefined();
       });
 
       it('should return return {success: true} if valid params are provided', async () => {
@@ -40,7 +50,7 @@ describe('Auth resolver integration test', () => {
         }});
 
         const data = res.data?.register;
-        const error = res.errors && res.errors[0].message
+        const error = res.errors && res.errors[0].message;
 
         expect(data).toEqual({success: true});
         expect(error).toBeUndefined();
@@ -48,4 +58,24 @@ describe('Auth resolver integration test', () => {
       });
     });
   });
+
+  describe('Query resolver', () => {
+    describe('login', () => {
+      it('should throw error is email is not found', async () => {
+        const res = await query({query: loginQuery, variables: {
+          input: {
+            email: 'fakeValidEmail@outlook.com',
+            password: 'fakepassword1010'
+          }
+        }});
+
+        const data = res.data?.login;
+        const error = res.errors && res.errors[0].message;
+
+        expect(data).toBeUndefined()
+        expect(error).toEqual('Failed to login: User does not exist');
+      });
+
+    });
+  })
 });

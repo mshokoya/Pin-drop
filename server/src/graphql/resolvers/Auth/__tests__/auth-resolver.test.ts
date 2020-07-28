@@ -27,7 +27,8 @@ jest.mock('../auth-helpers', () => {
     __esModule: true,
     loginViaPinDrop: jest.fn(() => ({
       email: user.email,
-      username: user.email.split('@')[0]
+      username: user.email.split('@')[0],
+      token: 'fakeToken'
     }))
   }
 })
@@ -83,7 +84,7 @@ describe('Auth resolver unit tests', () => {
         
         await expect(
           userResolver.Mutation.register(undefined, {input: user})
-        ).resolves.toMatchObject({success:true});
+        ).resolves.toEqual({success:true});
         expect(Users.findOne).toHaveBeenCalledTimes(1);
         expect(Users.findOne).toHaveBeenCalledWith({email: user.email})
         expect(Users.build).toHaveBeenCalledTimes(1);
@@ -117,7 +118,7 @@ describe('Auth resolver unit tests', () => {
       it('should return username & email when input is correct', async () => {
         await expect(
           userResolver.Query.login(undefined, {input: user}, {res: {}})
-        ).resolves.toMatchObject({email: 'mayo_s@hotmail.co.uk', username: 'mayo_s'});
+        ).resolves.toEqual({email: 'mayo_s@hotmail.co.uk', username: 'mayo_s', token: 'fakeToken'});
         expect(loginViaPinDrop).toHaveBeenCalledTimes(1);
       });
       

@@ -75,7 +75,8 @@ export const userResolver: IResolvers = {
 
         return {
           email: user.email,
-          username: user.username
+          username: user.username,
+          token: user.token!
         } 
 
       } catch (error) {

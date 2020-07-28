@@ -4,6 +4,7 @@ import {Request} from 'express';
 export interface Viewer {
   email: string;
   username: string;
+  token: string;
 }
 
 

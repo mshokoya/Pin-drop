@@ -19,6 +19,7 @@ export const typeDefs = gql`
   type Viewer {
     email: String!
     username: String
+    token: String!
   }
 
 

@@ -15,7 +15,7 @@ export const loginViaPinDrop = async ({email, res, token, db}: IloginViaPinDrop)
   const user = await db.findOneAndUpdate({email},{token: token}, {new: true});
 
   if (!user){
-    throw new Error('User does not exist.')
+    throw new Error('User does not exist')
   }
 
   const encryptId = authEncode(user.id);

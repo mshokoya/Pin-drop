@@ -76,7 +76,7 @@ export const userResolver: IResolvers = {
         return {
           email: user.email,
           username: user.username,
-          token: token // remove eslint error "no-non-null-assertion" and change to "user.token!"
+          token: user.token!
         } 
 
       } catch (error) {

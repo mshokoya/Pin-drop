@@ -1,11 +1,10 @@
 import React from 'react';
-import {Header} from '../';
-import {shallow, ShallowWrapper} from 'enzyme';
+import { shallow, ShallowWrapper } from 'enzyme';
+import { Header } from '..';
 
 describe('Header component', () => {
-
   it('should display logo', () => {
-    const renderer = shallow(<Header/>);
+    const renderer = shallow(<Header />) as ShallowWrapper;
     const img = renderer.find('.header__logo');
 
     expect(img.exists()).toBeTruthy();
@@ -18,7 +17,7 @@ describe('Header component', () => {
     let el: ShallowWrapper;
 
     beforeAll(() => {
-      renderer = shallow(<Header/>);
+      renderer = shallow(<Header />);
       el = renderer.find('Link');
     });
 
@@ -28,17 +27,17 @@ describe('Header component', () => {
 
     it('should initally render register button', () => {
       expect(el.get(2).props.to).toEqual('/register');
-    })
+    });
   });
 
-  describe('Menu buttons (viewer/user props added)',() => {
+  describe('Menu buttons (viewer/user props added)', () => {
     let renderer: ShallowWrapper;
     let el: ShallowWrapper;
     const viewer = {
       id: '1',
       email: 'fakeEmail@hotmail.co.uk',
-      username: 'fakeEmail'
-    }
+      username: 'fakeEmail',
+    };
 
     beforeAll(() => {
       renderer = shallow(<Header viewer={viewer} />);
@@ -51,7 +50,6 @@ describe('Header component', () => {
 
     it('should initally render logout button', () => {
       expect(el.get(2).props.to).toEqual('/logout');
-    })
-
-  })
-})
+    });
+  });
+});

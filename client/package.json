@@ -13,7 +13,7 @@
   "scripts": {
     "start:app": "react-scripts start",
     "start:css": "node-sass src/styles/main.scss public/css/style.css -w",
-    "watch": "concurrently \"npm:start:app\" \"npm:start:css\"",
+    "start": "concurrently \"npm:start:app\" \"npm:start:css\"",
     "build": "react-scripts build",
     "test:watch": "react-scripts test",
     "test": "react-scripts test --watchAll=false",

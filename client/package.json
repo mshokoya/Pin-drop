@@ -15,7 +15,8 @@
     "start:css": "node-sass src/styles/main.scss public/css/style.css -w",
     "watch": "concurrently \"npm:start:app\" \"npm:start:css\"",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test:watch": "react-scripts test",
+    "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "lint": "eslint ./src --ext .ts,.tsx",
     "lint:fix": "eslint ./src --ext .tx,.tsx --fix"

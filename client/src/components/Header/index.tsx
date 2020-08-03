@@ -12,12 +12,12 @@ export const Header = ({ viewer }: Props): JSX.Element => (
     </div>
 
     <div className="header__menu">
-      <div className="header__menu-item">
+      <div className="header__menu-item" data-testid="header__menu-item">
         {viewer
           ? (<Link to="/profile">Profile</Link>)
           : (<Link to="/login">Login</Link>)}
       </div>
-      <div className="header__menu-item">
+      <div className="header__menu-item" data-testid="header__menu-item">
         {viewer
           ? (<Link to="/logout">Logout</Link>)
           : (<Link to="/register">Register</Link>)}

@@ -1,7 +1,8 @@
 import React from 'react';
 import { MockedProvider } from '@apollo/client/testing';
-import { render } from 'react-dom';
-import { wait, act } from '@testing-library/react';
+import {
+  wait, act, RenderResult, render,
+} from '@testing-library/react';
 import { App } from '../App';
 import { loginUserQuery } from '../lib/graphql';
 
@@ -27,24 +28,24 @@ const mocks = [
 ];
 
 describe('App component (integration)', () => {
-  let el: HTMLDivElement;
-
   it('should attempt to fetch signed in users details upon render', async () => {
-    el = document.createElement('div');
+    let comp: RenderResult;
 
     act(() => {
-      render(
+      comp = render(
         <MockedProvider mocks={mocks} addTypename={false}>
           <App />
         </MockedProvider>,
-        el,
       );
     });
 
     await wait();
 
-    expect(el.querySelectorAll('.header__menu-item')[0].textContent).toEqual('Profile');
-    expect(el.querySelectorAll('.header__menu-item')[1].textContent).toEqual('Logout');
+    const { getAllByTestId } = comp!;
+    const headerButtons = getAllByTestId('header__menu-item');
+
+    expect(headerButtons[0].textContent).toEqual('Profile');
+    expect(headerButtons[1].textContent).toEqual('Logout');
   });
 
   // session storage token tests

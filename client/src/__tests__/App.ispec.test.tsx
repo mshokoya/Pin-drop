@@ -21,7 +21,7 @@ describe('App component (integration)', () => {
     await wait();
 
     expect(el.querySelectorAll('.header__menu-item')[0].textContent).toEqual('Profile');
-    expect(el.querySelectorAll('.header__menu-item')[1].textContent).toEqual('Login');
+    expect(el.querySelectorAll('.header__menu-item')[1].textContent).toEqual('Logout');
   });
 
   // session storage token tests

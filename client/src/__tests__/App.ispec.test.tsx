@@ -1,9 +1,30 @@
 import React from 'react';
 import { MockedProvider } from '@apollo/client/testing';
 import { render } from 'react-dom';
-import { wait } from '@testing-library/react';
+import { wait, act } from '@testing-library/react';
 import { App } from '../App';
-import { mocks } from './graphql-mocks';
+import { loginUserQuery } from '../lib/graphql';
+
+const mocks = [
+  {
+    request: {
+      query: loginUserQuery,
+      variables: {
+        input: {
+          email: 'test123@test.com',
+          password: 'test123',
+        },
+      },
+    },
+    result: {
+      data: {
+        login: {
+          email: 'test101@email.com', username: 'test101', token: 'testtoken',
+        },
+      },
+    },
+  },
+];
 
 describe('App component (integration)', () => {
   let el: HTMLDivElement;
@@ -11,12 +32,14 @@ describe('App component (integration)', () => {
   it('should attempt to fetch signed in users details upon render', async () => {
     el = document.createElement('div');
 
-    render(
-      <MockedProvider mocks={mocks} addTypename={false}>
-        <App />
-      </MockedProvider>,
-      el,
-    );
+    act(() => {
+      render(
+        <MockedProvider mocks={mocks} addTypename={false}>
+          <App />
+        </MockedProvider>,
+        el,
+      );
+    });
 
     await wait();
 
@@ -27,7 +50,6 @@ describe('App component (integration)', () => {
   // session storage token tests
 
   describe('When user is signed in', () => {
-    it.todo('should fetch the correct user detail');
     it.todo('should pass user details to "viewer" state');
     it.todo('should pass user details as "viewer" prop to the "Header" component');
   });

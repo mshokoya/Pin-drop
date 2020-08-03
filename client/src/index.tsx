@@ -1,12 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {
+  ApolloProvider, ApolloClient, InMemoryCache, from, createHttpLink,
+} from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
 import * as serviceWorker from './serviceWorker';
 import { App } from './App';
 
+const link1 = setContext(() => {
+  const token = sessionStorage.getItem('token');
+  return {
+    headers: { 'X-CSRF-TOKEN': token || '' },
+  };
+});
+
+const link2 = createHttpLink({ uri: 'http://localhost:4000/api' });
+
+const client = new ApolloClient({
+  cache: new InMemoryCache(),
+  link: from([link1, link2]),
+});
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ApolloProvider client={client}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </ApolloProvider>,
   document.getElementById('root'),
 );
 

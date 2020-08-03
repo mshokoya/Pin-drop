@@ -1,7 +1,5 @@
+import { Viewer } from '../../lib/graphql/types';
+
 export interface Props {
-  viewer?: {
-    id: string;
-    email: string;
-    username: string;
-  }
+  viewer: Viewer | void
 }

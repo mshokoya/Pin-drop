@@ -6,6 +6,7 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import * as serviceWorker from './serviceWorker';
 import { App } from './App';
+import { StateProvider } from './lib/utils/context';
 
 const link1 = setContext(() => {
   const token = sessionStorage.getItem('token');
@@ -24,7 +25,9 @@ const client = new ApolloClient({
 ReactDOM.render(
   <ApolloProvider client={client}>
     <React.StrictMode>
-      <App />
+      <StateProvider>
+        <App />
+      </StateProvider>
     </React.StrictMode>
   </ApolloProvider>,
   document.getElementById('root'),

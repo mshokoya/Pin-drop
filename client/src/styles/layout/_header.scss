@@ -1,3 +1,26 @@
 .header{
-  background-color: blue;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: .1rem solid lightgrey;
+  padding: 0 1rem;
+
+  &__logo {
+    height: 100%;
+
+    &-wrapper {
+      height: 70%;
+    }
+  }
+
+  &__menu{
+    display: flex;
+
+    &-item{
+      &:not(:last-child){
+        margin-right: 2rem;
+      }
+    }
+  }
 }

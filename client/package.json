@@ -11,8 +11,10 @@
     "husky": "^4.2.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-map-gl": "^5.2.7",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "react-tracked": "^1.4.1",
     "typescript": "^3.9.7"
   },
   "scripts": {
@@ -63,6 +65,7 @@
     "@types/node": "^12.12.50",
     "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.8",
+    "@types/react-map-gl": "^5.2.6",
     "@types/react-router-dom": "^5.1.5",
     "@typescript-eslint/eslint-plugin": "^3.7.1",
     "@typescript-eslint/parser": "^3.7.1",

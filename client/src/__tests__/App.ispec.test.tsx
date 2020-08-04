@@ -6,7 +6,7 @@ import {
 import { App } from '../App';
 import { loginUserQuery } from '../lib/graphql';
 
-const mocks = [
+const mockSuccess = [
   {
     request: {
       query: loginUserQuery,
@@ -27,37 +27,63 @@ const mocks = [
   },
 ];
 
+const mockFailure = [
+  {
+    request: {
+      query: loginUserQuery,
+      variables: {
+        input: {
+          email: 'test123@test.com',
+          password: 'test123',
+        },
+      },
+    },
+    error: new Error('failed to login'),
+  },
+];
+
 describe('App component (integration)', () => {
-  it('should attempt to fetch signed in users details upon render', async () => {
-    let comp: RenderResult;
-
-    act(() => {
-      comp = render(
-        <MockedProvider mocks={mocks} addTypename={false}>
-          <App />
-        </MockedProvider>,
-      );
-    });
-
-    await wait();
-
-    const { getAllByTestId } = comp!;
-    const headerButtons = getAllByTestId('header__menu-item');
-
-    expect(headerButtons[0].textContent).toEqual('Profile');
-    expect(headerButtons[1].textContent).toEqual('Logout');
-  });
+  let comp: RenderResult;
 
   // session storage token tests
 
-  describe('When user is signed in', () => {
-    it.todo('should pass user details to "viewer" state');
-    it.todo('should pass user details as "viewer" prop to the "Header" component');
+  describe('When user is authenticated', () => {
+    it('Profile & Logout buttons should render in header', async () => {
+      act(() => {
+        comp = render(
+          <MockedProvider mocks={mockSuccess} addTypename={false}>
+            <App />
+          </MockedProvider>,
+        );
+      });
+
+      await wait();
+
+      const { getAllByTestId } = comp!;
+      const headerButtons = getAllByTestId('header__menu-item');
+
+      expect(headerButtons[0].textContent).toEqual('Profile');
+      expect(headerButtons[1].textContent).toEqual('Logout');
+    });
   });
 
-  describe('When user in not signed in', () => {
-    it.todo('fetch should return empty object');
-    it.todo('should not change "viewer" state');
-    it.todo('should pass "null" value as "viewer" prop to the "Header" component');
+  describe('When user in not authenticated', () => {
+    it('Login & Register buttons should render in header', async () => {
+      act(() => {
+        comp = render(
+          <MockedProvider mocks={mockFailure} addTypename={false}>
+            <App />
+          </MockedProvider>,
+        );
+      });
+
+      await wait();
+
+      const { getAllByTestId } = comp!;
+      const headerButtons = getAllByTestId('header__menu-item');
+
+      expect(headerButtons[0].textContent).toEqual('Login');
+      expect(headerButtons[1].textContent).toEqual('Register');
+    });
   });
 });

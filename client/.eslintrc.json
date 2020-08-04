@@ -36,6 +36,7 @@
        "describe": true,
        "it": true,
        "expect": true,
-       "beforeAll": true
+       "beforeAll": true,
+       "jest": true
     }
 }

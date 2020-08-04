@@ -5,6 +5,7 @@ import {
 } from '@testing-library/react';
 import { App } from '../App';
 import { loginUserQuery } from '../lib/graphql';
+import { StateProvider } from '../lib/utils/context';
 
 const mockSuccess = [
   {
@@ -51,9 +52,11 @@ describe('App component (integration)', () => {
     it('Profile & Logout buttons should render in header', async () => {
       act(() => {
         comp = render(
-          <MockedProvider mocks={mockSuccess} addTypename={false}>
-            <App />
-          </MockedProvider>,
+          <StateProvider>
+            <MockedProvider mocks={mockSuccess} addTypename={false}>
+              <App />
+            </MockedProvider>
+          </StateProvider>,
         );
       });
 
@@ -71,9 +74,11 @@ describe('App component (integration)', () => {
     it('Login & Register buttons should render in header', async () => {
       act(() => {
         comp = render(
-          <MockedProvider mocks={mockFailure} addTypename={false}>
-            <App />
-          </MockedProvider>,
+          <StateProvider>
+            <MockedProvider mocks={mockFailure} addTypename={false}>
+              <App />
+            </MockedProvider>
+          </StateProvider>,
         );
       });
 

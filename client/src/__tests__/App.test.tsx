@@ -1,7 +1,7 @@
 import React from 'react';
 import { MockedProvider } from '@apollo/client/testing';
 import {
-  wait, act, RenderResult, render,
+  RenderResult, render, act, wait,
 } from '@testing-library/react';
 import { App } from '../App';
 import { loginUserQuery } from '../lib/graphql';
@@ -47,22 +47,35 @@ describe('App component (integration)', () => {
   let comp: RenderResult;
 
   // session storage token tests
+  it('should render the header component', async () => {
+    comp = render(
+      <StateProvider>
+        <MockedProvider mocks={mockSuccess} addTypename={false}>
+          <App />
+        </MockedProvider>
+      </StateProvider>,
+    );
+
+    await wait();
+
+    const { getByTestId } = comp;
+
+    expect(getByTestId('header')).toBeInTheDocument();
+  });
 
   describe('When user is authenticated', () => {
     it('Profile & Logout buttons should render in header', async () => {
-      act(() => {
-        comp = render(
-          <StateProvider>
-            <MockedProvider mocks={mockSuccess} addTypename={false}>
-              <App />
-            </MockedProvider>
-          </StateProvider>,
-        );
-      });
-
+      comp = render(
+        <StateProvider>
+          <MockedProvider mocks={mockSuccess} addTypename={false}>
+            <App />
+          </MockedProvider>
+        </StateProvider>,
+      );
+      // await act(async () => await wait());
       await wait();
-
-      const { getAllByTestId } = comp!;
+      // await act(async () => await waitForDomChange());
+      const { getAllByTestId } = comp;
       const headerButtons = getAllByTestId('header__menu-item');
 
       expect(headerButtons[0].textContent).toEqual('Profile');

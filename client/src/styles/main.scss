@@ -1,4 +1,12 @@
+// base
 @import "base/base";
 @import "base/typography";
 
+// layouts
 @import "layout/header";
+
+// components
+@import "components/map";
+
+// pages
+@import "pages/home";

@@ -1,7 +1,12 @@
-import React from 'react';
+import React, {useState, useEffect, useRef, MutableRefObject} from 'react';
 
-export const Map = () => (
-  <div>
-    Map
-  </div>
-);
+interface Props {
+  map: MutableRefObject<HTMLElement | null>
+}
+
+
+const Marker = () => <div className='map__marker'/>
+
+export const Map = ({map}: Props) => {
+  return <div className='map' ref={el => (map.current = el)}/>
+};

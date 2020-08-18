@@ -1,29 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {
-  ApolloProvider, ApolloClient, InMemoryCache, from, createHttpLink,
-} from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
+import mapboxgl from 'mapbox-gl';
+import { ApolloProvider } from '@apollo/client';
 import * as serviceWorker from './serviceWorker';
 import { App } from './App';
 import { StateProvider } from './lib/utils/context';
+import { apolloClient } from './lib/services/apollo';
 
-const link1 = setContext(() => {
-  const token = sessionStorage.getItem('token');
-  return {
-    headers: { 'X-CSRF-TOKEN': token || '' },
-  };
-});
-
-const link2 = createHttpLink({ uri: 'http://localhost:4000/api' });
-
-const client = new ApolloClient({
-  cache: new InMemoryCache(),
-  link: from([link1, link2]),
-});
+mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN as string;
 
 ReactDOM.render(
-  <ApolloProvider client={client}>
+  <ApolloProvider client={apolloClient}>
     <React.StrictMode>
       <StateProvider>
         <App />

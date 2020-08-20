@@ -1,0 +1,2637 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "84398",
+      "geometry": { "type": "Point", "coordinates": [-2.255398, 53.475452] },
+      "properties": {
+        "xid": "W205061197",
+        "name": "Mamucium",
+        "rate": 7,
+        "osm": "way/205061197",
+        "wikidata": "Q3285089",
+        "kinds": "historic_architecture,architecture,historic,archaeology,interesting_places,destroyed_objects,other_archaeological_sites"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "84400",
+      "geometry": { "type": "Point", "coordinates": [-2.253629, 53.475727] },
+      "properties": {
+        "xid": "W205062169",
+        "name": "Mamucium",
+        "rate": 7,
+        "osm": "way/205062169",
+        "wikidata": "Q3285089",
+        "kinds": "historic_architecture,architecture,historic,archaeology,interesting_places,destroyed_objects,other_archaeological_sites"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "2644702",
+      "geometry": { "type": "Point", "coordinates": [-2.251063, 53.474094] },
+      "properties": {
+        "xid": "N5064014760",
+        "name": "Deansgate",
+        "rate": 7,
+        "osm": "node/5064014760",
+        "wikidata": "Q1620954",
+        "kinds": "industrial_facilities,railway_stations,interesting_places"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3477406",
+      "geometry": { "type": "Point", "coordinates": [-2.241418, 53.478642] },
+      "properties": {
+        "xid": "W30957808",
+        "name": "Manchester Art Gallery",
+        "rate": 7,
+        "osm": "way/30957808",
+        "wikidata": "Q2638817",
+        "kinds": "museums,cultural,interesting_places,art_galleries"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3511501",
+      "geometry": { "type": "Point", "coordinates": [-2.240918, 53.475021] },
+      "properties": {
+        "xid": "W31178728",
+        "name": "Palace Theatre",
+        "rate": 7,
+        "osm": "way/31178728",
+        "wikidata": "Q3360751",
+        "kinds": "cultural,theatres_and_entertainments,interesting_places,other_theatres"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "4032207",
+      "geometry": { "type": "Point", "coordinates": [-2.254667, 53.475014] },
+      "properties": {
+        "xid": "W242969646",
+        "name": "Mamucium",
+        "rate": 7,
+        "osm": "way/242969646",
+        "wikidata": "Q3285089",
+        "kinds": "historic,archaeology,interesting_places,other_archaeological_sites"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "5533586",
+      "geometry": { "type": "Point", "coordinates": [-2.251352, 53.4743] },
+      "properties": {
+        "xid": "W114421555",
+        "name": "Deansgate",
+        "rate": 7,
+        "osm": "way/114421555",
+        "wikidata": "Q1620954",
+        "kinds": "industrial_facilities,railway_stations,interesting_places"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "9488414",
+      "geometry": { "type": "Point", "coordinates": [-2.239981, 53.477783] },
+      "properties": {
+        "xid": "N3674964137",
+        "name": "Circus Tavern",
+        "rate": 7,
+        "osm": "node/3674964137",
+        "wikidata": "Q26539404",
+        "kinds": "historic_architecture,architecture,interesting_places,pubs,foods,tourist_facilities,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "9512787",
+      "geometry": { "type": "Point", "coordinates": [-2.255614, 53.477276] },
+      "properties": {
+        "xid": "R66848",
+        "name": "Museum of Science and Industry",
+        "rate": 7,
+        "osm": "relation/66848",
+        "wikidata": "Q2638616",
+        "kinds": "museums,science_museums,cultural,interesting_places"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "9518143",
+      "geometry": { "type": "Point", "coordinates": [-2.251409, 53.47887] },
+      "properties": {
+        "xid": "W31192029",
+        "name": "Manchester Opera House",
+        "rate": 7,
+        "osm": "way/31192029",
+        "wikidata": "Q1327556",
+        "kinds": "cultural,theatres_and_entertainments,interesting_places,other_theatres"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "9540253",
+      "geometry": { "type": "Point", "coordinates": [-2.243051, 53.478733] },
+      "properties": {
+        "xid": "N1634316329",
+        "name": "Cenotaph",
+        "rate": 7,
+        "osm": "node/1634316329",
+        "wikidata": "Q6747297",
+        "kinds": "historic,monuments_and_memorials,burial_places,interesting_places,war_memorials,monuments"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "9642066",
+      "geometry": { "type": "Point", "coordinates": [-2.247215, 53.477684] },
+      "properties": {
+        "xid": "W29450342",
+        "name": "radisson blu edwardian manchester",
+        "rate": 7,
+        "osm": "way/29450342",
+        "wikidata": "Q1981083",
+        "kinds": "historic_architecture,architecture,accomodations,interesting_places,other_hotels,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "9680838",
+      "geometry": { "type": "Point", "coordinates": [-2.254701, 53.477261] },
+      "properties": {
+        "xid": "N6684605685",
+        "name": "Science and Industry Museum",
+        "rate": 7,
+        "osm": "node/6684605685",
+        "wikidata": "Q2638616",
+        "kinds": "museums,science_museums,cultural,interesting_places"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12191975",
+      "geometry": { "type": "Point", "coordinates": [-2.2455, 53.4786] },
+      "properties": {
+        "xid": "Q6503890",
+        "name": "Lawrence Buildings",
+        "rate": 7,
+        "wikidata": "Q6503890",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12193839",
+      "geometry": { "type": "Point", "coordinates": [-2.235498, 53.476124] },
+      "properties": {
+        "xid": "Q7396868",
+        "name": "Sackville Street Building",
+        "rate": 7,
+        "wikidata": "Q7396868",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12248699",
+      "geometry": { "type": "Point", "coordinates": [-2.239849, 53.478153] },
+      "properties": {
+        "xid": "Q26512667",
+        "name": "55 Faulkner Street, Manchester",
+        "rate": 7,
+        "wikidata": "Q26512667",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12366430",
+      "geometry": { "type": "Point", "coordinates": [-2.24472, 53.4781] },
+      "properties": {
+        "xid": "Q3285343",
+        "name": "Manchester Central Library",
+        "rate": 7,
+        "wikidata": "Q3285343",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12368629",
+      "geometry": { "type": "Point", "coordinates": [-2.2381, 53.474998] },
+      "properties": {
+        "xid": "Q4806374",
+        "name": "Asia House, Manchester",
+        "rate": 7,
+        "wikidata": "Q4806374",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12369422",
+      "geometry": { "type": "Point", "coordinates": [-2.25262, 53.474209] },
+      "properties": {
+        "xid": "Q5050495",
+        "name": "Castlefield Congregational Chapel",
+        "rate": 7,
+        "wikidata": "Q5050495",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12369859",
+      "geometry": { "type": "Point", "coordinates": [-2.2521, 53.4786] },
+      "properties": {
+        "xid": "Q5177642",
+        "name": "County Court, Manchester",
+        "rate": 7,
+        "wikidata": "Q5177642",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12371001",
+      "geometry": { "type": "Point", "coordinates": [-2.24917, 53.4772] },
+      "properties": {
+        "xid": "Q5599692",
+        "name": "Great Northern Warehouse",
+        "rate": 7,
+        "wikidata": "Q5599692",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12372716",
+      "geometry": { "type": "Point", "coordinates": [-2.245, 53.478001] },
+      "properties": {
+        "xid": "Q6747527",
+        "name": "Manchester Town Hall Extension",
+        "rate": 7,
+        "wikidata": "Q6747527",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12372860",
+      "geometry": { "type": "Point", "coordinates": [-2.2392, 53.476898] },
+      "properties": {
+        "xid": "Q6804568",
+        "name": "Mechanics\u0027 Institute, Manchester",
+        "rate": 7,
+        "wikidata": "Q6804568",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12372884",
+      "geometry": { "type": "Point", "coordinates": [-2.2461, 53.478802] },
+      "properties": {
+        "xid": "Q6815422",
+        "name": "Memorial Hall, Manchester",
+        "rate": 7,
+        "wikidata": "Q6815422",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12375268",
+      "geometry": { "type": "Point", "coordinates": [-2.2465, 53.477699] },
+      "properties": {
+        "xid": "Q7777435",
+        "name": "Theatre Royal, Manchester",
+        "rate": 7,
+        "wikidata": "Q7777435",
+        "kinds": "architecture,tourist_facilities,historic_architecture,theatres_and_entertainments,cultural,cinemas,nightclubs,interesting_places,casino,adult,music_venues,foods,bars,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12404813",
+      "geometry": { "type": "Point", "coordinates": [-2.247279, 53.474976] },
+      "properties": {
+        "xid": "Q21647629",
+        "name": "The Briton\u0027s Protection",
+        "rate": 7,
+        "wikidata": "Q21647629",
+        "kinds": "historic_architecture,architecture,interesting_places,pubs,foods,tourist_facilities,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12549954",
+      "geometry": { "type": "Point", "coordinates": [-2.24, 53.475101] },
+      "properties": {
+        "xid": "Q4966847",
+        "name": "Bridgewater House",
+        "rate": 7,
+        "wikidata": "Q4966847",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12553484",
+      "geometry": { "type": "Point", "coordinates": [-2.24139, 53.4786] },
+      "properties": {
+        "xid": "Q6747276",
+        "name": "Manchester Athenaeum",
+        "rate": 7,
+        "wikidata": "Q6747276",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12730634",
+      "geometry": { "type": "Point", "coordinates": [-2.243375, 53.475586] },
+      "properties": {
+        "xid": "Q5029388",
+        "name": "Canada House",
+        "rate": 7,
+        "wikidata": "Q5029388",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12907245",
+      "geometry": { "type": "Point", "coordinates": [-2.244167, 53.479168] },
+      "properties": {
+        "xid": "Q2578415",
+        "name": "Manchester Town Hall",
+        "rate": 7,
+        "wikidata": "Q2578415",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12910426",
+      "geometry": { "type": "Point", "coordinates": [-2.24793, 53.478298] },
+      "properties": {
+        "xid": "Q4710402",
+        "name": "Albert Hall, Manchester",
+        "rate": 7,
+        "wikidata": "Q4710402",
+        "kinds": "cultural,theatres_and_entertainments,interesting_places,music_venues"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12911742",
+      "geometry": { "type": "Point", "coordinates": [-2.2348, 53.4786] },
+      "properties": {
+        "xid": "Q5123378",
+        "name": "City Police Courts, Manchester",
+        "rate": 7,
+        "wikidata": "Q5123378",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12914659",
+      "geometry": { "type": "Point", "coordinates": [-2.24737, 53.476101] },
+      "properties": {
+        "xid": "Q6747302",
+        "name": "Manchester Central Convention Complex",
+        "rate": 7,
+        "wikidata": "Q6747302",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12916849",
+      "geometry": { "type": "Point", "coordinates": [-2.25056, 53.4786] },
+      "properties": {
+        "xid": "Q7640485",
+        "name": "Sunlight House",
+        "rate": 7,
+        "wikidata": "Q7640485",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12976552",
+      "geometry": { "type": "Point", "coordinates": [-2.237, 53.476601] },
+      "properties": {
+        "xid": "Q26560805",
+        "name": "42–44 Sackville Street",
+        "rate": 7,
+        "wikidata": "Q26560805",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13094906",
+      "geometry": { "type": "Point", "coordinates": [-2.2383, 53.4753] },
+      "properties": {
+        "xid": "Q6483196",
+        "name": "Lancaster House, Manchester",
+        "rate": 7,
+        "wikidata": "Q6483196",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13096613",
+      "geometry": { "type": "Point", "coordinates": [-2.2403, 53.4744] },
+      "properties": {
+        "xid": "Q7307626",
+        "name": "Refuge Assurance Building",
+        "rate": 7,
+        "wikidata": "Q7307626",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13097262",
+      "geometry": { "type": "Point", "coordinates": [-2.2416, 53.475498] },
+      "properties": {
+        "xid": "Q7588436",
+        "name": "St. James Buildings, Manchester",
+        "rate": 7,
+        "wikidata": "Q7588436",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13097797",
+      "geometry": { "type": "Point", "coordinates": [-2.2422, 53.475201] },
+      "properties": {
+        "xid": "Q7824236",
+        "name": "Tootal, Broadhurst and Lee Building, Manchester",
+        "rate": 7,
+        "wikidata": "Q7824236",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13274215",
+      "geometry": { "type": "Point", "coordinates": [-2.2394, 53.474998] },
+      "properties": {
+        "xid": "Q6019325",
+        "name": "India House, Manchester",
+        "rate": 7,
+        "wikidata": "Q6019325",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3519549",
+      "geometry": { "type": "Point", "coordinates": [-2.246053, 53.475368] },
+      "properties": {
+        "xid": "W165386099",
+        "name": "Bridgewater Hall",
+        "rate": 3,
+        "osm": "way/165386099",
+        "wikidata": "Q2925178",
+        "kinds": "cultural,theatres_and_entertainments,interesting_places,music_venues"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "4018598",
+      "geometry": { "type": "Point", "coordinates": [-2.243051, 53.477886] },
+      "properties": {
+        "xid": "N6138345832",
+        "name": "Emmeline Pankhurst",
+        "rate": 3,
+        "osm": "node/6138345832",
+        "wikidata": "Q59773345",
+        "kinds": "historic,monuments_and_memorials,urban_environment,cultural,interesting_places,sculptures,monuments"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "9537976",
+      "geometry": { "type": "Point", "coordinates": [-2.236044, 53.4767] },
+      "properties": {
+        "xid": "N1295097482",
+        "name": "Alan Turing Statue",
+        "rate": 3,
+        "osm": "node/1295097482",
+        "wikidata": "Q7251",
+        "kinds": "historic,monuments_and_memorials,interesting_places,monuments"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "9674662",
+      "geometry": { "type": "Point", "coordinates": [-2.239846, 53.478355] },
+      "properties": {
+        "xid": "W260284292",
+        "name": "Chinatown Arch",
+        "rate": 3,
+        "osm": "way/260284292",
+        "wikidata": "Q5100147",
+        "kinds": "other,unclassified_objects,interesting_places,tourist_object"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "9687838",
+      "geometry": { "type": "Point", "coordinates": [-2.246848, 53.477837] },
+      "properties": {
+        "xid": "N1177048964",
+        "name": "Peterloo Massacre",
+        "rate": 3,
+        "osm": "node/1177048964",
+        "wikidata": "Q876357",
+        "kinds": "historic,monuments_and_memorials,interesting_places,monuments"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12185414",
+      "geometry": { "type": "Point", "coordinates": [-2.241111, 53.474304] },
+      "properties": {
+        "xid": "Q2997538",
+        "name": "Cornerhouse",
+        "rate": 3,
+        "wikidata": "Q2997538",
+        "kinds": "museums,cultural,cinemas,theatres_and_entertainments,interesting_places,art_galleries"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12401364",
+      "geometry": { "type": "Point", "coordinates": [-2.2427, 53.477039] },
+      "properties": {
+        "xid": "Q18160965",
+        "name": "Odeon Cinema, Manchester",
+        "rate": 3,
+        "wikidata": "Q18160965",
+        "kinds": "cinemas,cultural,theatres_and_entertainments,interesting_places"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12728534",
+      "geometry": { "type": "Point", "coordinates": [-2.236028, 53.476723] },
+      "properties": {
+        "xid": "Q3736114",
+        "name": "Alan Turing Memorial",
+        "rate": 3,
+        "wikidata": "Q3736114",
+        "kinds": "cultural,urban_environment,interesting_places,sculptures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12911972",
+      "geometry": { "type": "Point", "coordinates": [-2.240861, 53.476791] },
+      "properties": {
+        "xid": "Q5192203",
+        "name": "Cube Gallery",
+        "rate": 3,
+        "wikidata": "Q5192203",
+        "kinds": "museums,cultural,interesting_places,other_museums"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13104475",
+      "geometry": { "type": "Point", "coordinates": [-2.248, 53.4776] },
+      "properties": {
+        "xid": "Q14943579",
+        "name": "Great Northern Tower",
+        "rate": 3,
+        "wikidata": "Q14943579",
+        "kinds": "skyscrapers,architecture,interesting_places"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13263646",
+      "geometry": { "type": "Point", "coordinates": [-2.250278, 53.475277] },
+      "properties": {
+        "xid": "Q814128",
+        "name": "Beetham Tower",
+        "rate": 3,
+        "wikidata": "Q814128",
+        "kinds": "skyscrapers,architecture,interesting_places"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13448855",
+      "geometry": { "type": "Point", "coordinates": [-2.235833, 53.476665] },
+      "properties": {
+        "xid": "Q3460953",
+        "name": "Whitworth Gardens",
+        "rate": 3,
+        "wikidata": "Q3460953",
+        "kinds": "gardens_and_parks,cultural,urban_environment,interesting_places"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13452857",
+      "geometry": { "type": "Point", "coordinates": [-2.246, 53.478001] },
+      "properties": {
+        "xid": "Q5517007",
+        "name": "Gaiety Theatre, Manchester",
+        "rate": 3,
+        "wikidata": "Q5517007",
+        "kinds": "theatres_and_entertainments,cultural,interesting_places,other_theatres"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1685073",
+      "geometry": { "type": "Point", "coordinates": [-2.23825, 53.476425] },
+      "properties": {
+        "xid": "N2717584735",
+        "name": "new union",
+        "rate": 6,
+        "osm": "node/2717584735",
+        "wikidata": "Q26539756",
+        "kinds": "guest_houses,historic_architecture,architecture,accomodations,interesting_places,pubs,foods,tourist_facilities,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "5353832",
+      "geometry": { "type": "Point", "coordinates": [-2.237505, 53.477791] },
+      "properties": {
+        "xid": "W114412249",
+        "name": "Chorlton Street",
+        "rate": 6,
+        "osm": "way/114412249",
+        "wikidata": "Q26571977",
+        "kinds": "industrial_facilities,railway_stations,interesting_places"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "9476603",
+      "geometry": { "type": "Point", "coordinates": [-2.239835, 53.477871] },
+      "properties": {
+        "xid": "N309451656",
+        "name": "Grey Horse",
+        "rate": 6,
+        "osm": "node/309451656",
+        "wikidata": "Q26539307",
+        "kinds": "historic_architecture,architecture,interesting_places,pubs,foods,tourist_facilities,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "9486994",
+      "geometry": { "type": "Point", "coordinates": [-2.24175, 53.478233] },
+      "properties": {
+        "xid": "N3083932579",
+        "name": "princess st.  hotel",
+        "rate": 6,
+        "osm": "node/3083932579",
+        "wikidata": "Q26539707",
+        "kinds": "historic_architecture,architecture,accomodations,interesting_places,other_hotels,pubs,foods,tourist_facilities,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "9558819",
+      "geometry": { "type": "Point", "coordinates": [-2.245858, 53.478394] },
+      "properties": {
+        "xid": "W31231628",
+        "name": "Friends Meeting House",
+        "rate": 6,
+        "osm": "way/31231628",
+        "wikidata": "Q26579212",
+        "kinds": "religion,churches,interesting_places,other_churches"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "9604222",
+      "geometry": { "type": "Point", "coordinates": [-2.250829, 53.474632] },
+      "properties": {
+        "xid": "W448801915",
+        "name": "Lock 91",
+        "rate": 6,
+        "osm": "way/448801915",
+        "wikidata": "Q26539898",
+        "kinds": "historic_architecture,architecture,interesting_places,foods,bars,tourist_facilities,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "9638214",
+      "geometry": { "type": "Point", "coordinates": [-2.245853, 53.478848] },
+      "properties": {
+        "xid": "W31926680",
+        "name": "Tampopo",
+        "rate": 6,
+        "osm": "way/31926680",
+        "wikidata": "Q26492258",
+        "kinds": "historic_architecture,architecture,interesting_places,restaurants,foods,tourist_facilities,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "9639853",
+      "geometry": { "type": "Point", "coordinates": [-2.244629, 53.474976] },
+      "properties": {
+        "xid": "W100646638",
+        "name": "Peveril of the Peak",
+        "rate": 6,
+        "osm": "way/100646638",
+        "wikidata": "Q26581020",
+        "kinds": "historic_architecture,architecture,interesting_places,pubs,foods,tourist_facilities,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "9647468",
+      "geometry": { "type": "Point", "coordinates": [-2.253213, 53.476048] },
+      "properties": {
+        "xid": "N2886288820",
+        "name": "Castlefield",
+        "rate": 6,
+        "osm": "node/2886288820",
+        "wikidata": "Q26496616",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12247640",
+      "geometry": { "type": "Point", "coordinates": [-2.235857, 53.478233] },
+      "properties": {
+        "xid": "Q26503109",
+        "name": "11, Bloom Street",
+        "rate": 6,
+        "wikidata": "Q26503109",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12248734",
+      "geometry": { "type": "Point", "coordinates": [-2.243297, 53.475063] },
+      "properties": {
+        "xid": "Q26512995",
+        "name": "Lee House",
+        "rate": 6,
+        "wikidata": "Q26512995",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12248745",
+      "geometry": { "type": "Point", "coordinates": [-2.240075, 53.476284] },
+      "properties": {
+        "xid": "Q26513100",
+        "name": "104, Bloom Street",
+        "rate": 6,
+        "wikidata": "Q26513100",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12251716",
+      "geometry": { "type": "Point", "coordinates": [-2.242115, 53.476559] },
+      "properties": {
+        "xid": "Q26539409",
+        "name": "116 And 118, Portland Street",
+        "rate": 6,
+        "wikidata": "Q26539409",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12254080",
+      "geometry": { "type": "Point", "coordinates": [-2.250816, 53.477791] },
+      "properties": {
+        "xid": "Q26560799",
+        "name": "10, St John Street",
+        "rate": 6,
+        "wikidata": "Q26560799",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12255392",
+      "geometry": { "type": "Point", "coordinates": [-2.252342, 53.47821] },
+      "properties": {
+        "xid": "Q26571929",
+        "name": "14, Byrom Street",
+        "rate": 6,
+        "wikidata": "Q26571929",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12255394",
+      "geometry": { "type": "Point", "coordinates": [-2.24503, 53.47517] },
+      "properties": {
+        "xid": "Q26571957",
+        "name": "Chepstow House",
+        "rate": 6,
+        "wikidata": "Q26571957",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12427088",
+      "geometry": { "type": "Point", "coordinates": [-2.23608, 53.477764] },
+      "properties": {
+        "xid": "Q26492204",
+        "name": "The Churchill Public House",
+        "rate": 6,
+        "wikidata": "Q26492204",
+        "kinds": "historic_architecture,architecture,interesting_places,pubs,foods,tourist_facilities,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12427091",
+      "geometry": { "type": "Point", "coordinates": [-2.256102, 53.474194] },
+      "properties": {
+        "xid": "Q26492222",
+        "name": "Merchants Warehouse",
+        "rate": 6,
+        "wikidata": "Q26492222",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12427515",
+      "geometry": { "type": "Point", "coordinates": [-2.239249, 53.47855] },
+      "properties": {
+        "xid": "Q26496597",
+        "name": "45 And 47, Faulkner Street",
+        "rate": 6,
+        "wikidata": "Q26496597",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12427516",
+      "geometry": { "type": "Point", "coordinates": [-2.236321, 53.474979] },
+      "properties": {
+        "xid": "Q26496603",
+        "name": "Orient House",
+        "rate": 6,
+        "wikidata": "Q26496603",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12427519",
+      "geometry": { "type": "Point", "coordinates": [-2.249751, 53.478539] },
+      "properties": {
+        "xid": "Q26496615",
+        "name": "Royal London House",
+        "rate": 6,
+        "wikidata": "Q26496615",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12429387",
+      "geometry": { "type": "Point", "coordinates": [-2.242286, 53.47736] },
+      "properties": {
+        "xid": "Q26512855",
+        "name": "63, George Street",
+        "rate": 6,
+        "wikidata": "Q26512855",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12429515",
+      "geometry": { "type": "Point", "coordinates": [-2.251453, 53.475857] },
+      "properties": {
+        "xid": "Q26513985",
+        "name": "K6 Telephone Kiosk Beside South West Corner Of Number 330 Deansgate",
+        "rate": 6,
+        "wikidata": "Q26513985",
+        "kinds": "other,red_telephone_boxes,interesting_places"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12432272",
+      "geometry": { "type": "Point", "coordinates": [-2.243139, 53.476467] },
+      "properties": {
+        "xid": "Q26538709",
+        "name": "Princes Buildings",
+        "rate": 6,
+        "wikidata": "Q26538709",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12432317",
+      "geometry": { "type": "Point", "coordinates": [-2.246419, 53.478176] },
+      "properties": {
+        "xid": "Q26539061",
+        "name": "Lancashire House",
+        "rate": 6,
+        "wikidata": "Q26539061",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12432340",
+      "geometry": { "type": "Point", "coordinates": [-2.240851, 53.476803] },
+      "properties": {
+        "xid": "Q26539310",
+        "name": "113-119, Portland Street",
+        "rate": 6,
+        "wikidata": "Q26539310",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12432341",
+      "geometry": { "type": "Point", "coordinates": [-2.242128, 53.476082] },
+      "properties": {
+        "xid": "Q26539311",
+        "name": "127-133, Portland Street",
+        "rate": 6,
+        "wikidata": "Q26539311",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12432381",
+      "geometry": { "type": "Point", "coordinates": [-2.238954, 53.47617] },
+      "properties": {
+        "xid": "Q26539706",
+        "name": "Lionesse House",
+        "rate": 6,
+        "wikidata": "Q26539706",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12432396",
+      "geometry": { "type": "Point", "coordinates": [-2.237598, 53.476513] },
+      "properties": {
+        "xid": "Q26539858",
+        "name": "Rochdale Canal Boundary Wall to Canal Street between Princess Street and Sackville Street",
+        "rate": 6,
+        "wikidata": "Q26539858",
+        "kinds": "defensive_walls,historic,fortifications,interesting_places"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12433052",
+      "geometry": { "type": "Point", "coordinates": [-2.251801, 53.477966] },
+      "properties": {
+        "xid": "Q26546137",
+        "name": "24A And 26, St John Street",
+        "rate": 6,
+        "wikidata": "Q26546137",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12433100",
+      "geometry": { "type": "Point", "coordinates": [-2.236502, 53.476276] },
+      "properties": {
+        "xid": "Q26546474",
+        "name": "Regency House With Barclays Bank",
+        "rate": 6,
+        "wikidata": "Q26546474",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12434715",
+      "geometry": { "type": "Point", "coordinates": [-2.241114, 53.475319] },
+      "properties": {
+        "xid": "Q26560867",
+        "name": "Rochdale Canal Lock Number 88, To East Of Oxford Street",
+        "rate": 6,
+        "wikidata": "Q26560867",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12434716",
+      "geometry": { "type": "Point", "coordinates": [-2.255834, 53.474552] },
+      "properties": {
+        "xid": "Q26560868",
+        "name": "Rochdale Canal Lock Number 92 And Castle Street Bridge",
+        "rate": 6,
+        "wikidata": "Q26560868",
+        "kinds": "bridges,architecture,interesting_places,other_bridges"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12434725",
+      "geometry": { "type": "Point", "coordinates": [-2.239443, 53.476437] },
+      "properties": {
+        "xid": "Q26560916",
+        "name": "Rhodesia House",
+        "rate": 6,
+        "wikidata": "Q26560916",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12435965",
+      "geometry": { "type": "Point", "coordinates": [-2.25427, 53.478413] },
+      "properties": {
+        "xid": "Q26571873",
+        "name": "St Johns College Of Further Education",
+        "rate": 6,
+        "wikidata": "Q26571873",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12607846",
+      "geometry": { "type": "Point", "coordinates": [-2.239749, 53.479053] },
+      "properties": {
+        "xid": "Q26492227",
+        "name": "Austin House",
+        "rate": 6,
+        "wikidata": "Q26492227",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12608249",
+      "geometry": { "type": "Point", "coordinates": [-2.239174, 53.478676] },
+      "properties": {
+        "xid": "Q26496596",
+        "name": "41 And 43, Faulkner Street",
+        "rate": 6,
+        "wikidata": "Q26496596",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12610084",
+      "geometry": { "type": "Point", "coordinates": [-2.239924, 53.478092] },
+      "properties": {
+        "xid": "Q26512678",
+        "name": "57, Faulkner Street",
+        "rate": 6,
+        "wikidata": "Q26512678",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12613051",
+      "geometry": { "type": "Point", "coordinates": [-2.23599, 53.477829] },
+      "properties": {
+        "xid": "Q26539784",
+        "name": "9, Richmond Street",
+        "rate": 6,
+        "wikidata": "Q26539784",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12613052",
+      "geometry": { "type": "Point", "coordinates": [-2.235399, 53.47789] },
+      "properties": {
+        "xid": "Q26539786",
+        "name": "Rochdale Canal Boundary Wall To Canal Between Chorlton Street And Minshull Street",
+        "rate": 6,
+        "wikidata": "Q26539786",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12613760",
+      "geometry": { "type": "Point", "coordinates": [-2.251025, 53.477821] },
+      "properties": {
+        "xid": "Q26546135",
+        "name": "12-16, St John Street",
+        "rate": 6,
+        "wikidata": "Q26546135",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12615362",
+      "geometry": { "type": "Point", "coordinates": [-2.251616, 53.477959] },
+      "properties": {
+        "xid": "Q26560726",
+        "name": "24, St John Street",
+        "rate": 6,
+        "wikidata": "Q26560726",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12615375",
+      "geometry": { "type": "Point", "coordinates": [-2.251465, 53.477905] },
+      "properties": {
+        "xid": "Q26560801",
+        "name": "22, St John Street",
+        "rate": 6,
+        "wikidata": "Q26560801",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12615387",
+      "geometry": { "type": "Point", "coordinates": [-2.239407, 53.47723] },
+      "properties": {
+        "xid": "Q26560906",
+        "name": "101, Princess Street",
+        "rate": 6,
+        "wikidata": "Q26560906",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12615388",
+      "geometry": { "type": "Point", "coordinates": [-2.242687, 53.479004] },
+      "properties": {
+        "xid": "Q26560917",
+        "name": "73 And 75, Princess Street",
+        "rate": 6,
+        "wikidata": "Q26560917",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12615389",
+      "geometry": { "type": "Point", "coordinates": [-2.241009, 53.478161] },
+      "properties": {
+        "xid": "Q26560918",
+        "name": "83, Princess Street",
+        "rate": 6,
+        "wikidata": "Q26560918",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12615407",
+      "geometry": { "type": "Point", "coordinates": [-2.242292, 53.478462] },
+      "properties": {
+        "xid": "Q26561085",
+        "name": "14 and 16 Princess Street and 77 and 77a Mosley Street",
+        "rate": 6,
+        "wikidata": "Q26561085",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12616628",
+      "geometry": { "type": "Point", "coordinates": [-2.240497, 53.478134] },
+      "properties": {
+        "xid": "Q26571868",
+        "name": "52 And 54, Faulkner Street",
+        "rate": 6,
+        "wikidata": "Q26571868",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12616639",
+      "geometry": { "type": "Point", "coordinates": [-2.237143, 53.476498] },
+      "properties": {
+        "xid": "Q26571965",
+        "name": "3, Brazil Street",
+        "rate": 6,
+        "wikidata": "Q26571965",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12628539",
+      "geometry": { "type": "Point", "coordinates": [-2.235325, 53.477463] },
+      "properties": {
+        "xid": "Q26683402",
+        "name": "Minshull House",
+        "rate": 6,
+        "wikidata": "Q26683402",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12788387",
+      "geometry": { "type": "Point", "coordinates": [-2.235492, 53.477596] },
+      "properties": {
+        "xid": "Q26492205",
+        "name": "Mintierna House",
+        "rate": 6,
+        "wikidata": "Q26492205",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12788393",
+      "geometry": { "type": "Point", "coordinates": [-2.252204, 53.478111] },
+      "properties": {
+        "xid": "Q26492253",
+        "name": "Two Bollards At East End Of St Johns Passage",
+        "rate": 6,
+        "wikidata": "Q26492253",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12788395",
+      "geometry": { "type": "Point", "coordinates": [-2.245624, 53.478844] },
+      "properties": {
+        "xid": "Q26492259",
+        "name": "Carlton House",
+        "rate": 6,
+        "wikidata": "Q26492259",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12788397",
+      "geometry": { "type": "Point", "coordinates": [-2.245505, 53.479115] },
+      "properties": {
+        "xid": "Q26492263",
+        "name": "Gladstones Statue",
+        "rate": 6,
+        "wikidata": "Q26492263",
+        "kinds": "cultural,urban_environment,interesting_places,sculptures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12789802",
+      "geometry": { "type": "Point", "coordinates": [-2.249303, 53.479206] },
+      "properties": {
+        "xid": "Q26505116",
+        "name": "184 And 186, Deansgate",
+        "rate": 6,
+        "wikidata": "Q26505116",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12789806",
+      "geometry": { "type": "Point", "coordinates": [-2.249058, 53.478657] },
+      "properties": {
+        "xid": "Q26505140",
+        "name": "Onward Buildings",
+        "rate": 6,
+        "wikidata": "Q26505140",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12790836",
+      "geometry": { "type": "Point", "coordinates": [-2.236048, 53.478508] },
+      "properties": {
+        "xid": "Q26514370",
+        "name": "8, Minshull Street",
+        "rate": 6,
+        "wikidata": "Q26514370",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12793654",
+      "geometry": { "type": "Point", "coordinates": [-2.240431, 53.477131] },
+      "properties": {
+        "xid": "Q26539309",
+        "name": "Basil House",
+        "rate": 6,
+        "wikidata": "Q26539309",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12793709",
+      "geometry": { "type": "Point", "coordinates": [-2.240992, 53.477783] },
+      "properties": {
+        "xid": "Q26539702",
+        "name": "34, Princess Street",
+        "rate": 6,
+        "wikidata": "Q26539702",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12793710",
+      "geometry": { "type": "Point", "coordinates": [-2.239645, 53.476772] },
+      "properties": {
+        "xid": "Q26539705",
+        "name": "Transact House",
+        "rate": 6,
+        "wikidata": "Q26539705",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12793711",
+      "geometry": { "type": "Point", "coordinates": [-2.238599, 53.475864] },
+      "properties": {
+        "xid": "Q26539708",
+        "name": "Central House",
+        "rate": 6,
+        "wikidata": "Q26539708",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12793712",
+      "geometry": { "type": "Point", "coordinates": [-2.240707, 53.478027] },
+      "properties": {
+        "xid": "Q26539709",
+        "name": "87-91, Princess Street",
+        "rate": 6,
+        "wikidata": "Q26539709",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12793719",
+      "geometry": { "type": "Point", "coordinates": [-2.235543, 53.47773] },
+      "properties": {
+        "xid": "Q26539789",
+        "name": "Rochdale Canal Lock Number 86, To East Of Chorlton Street",
+        "rate": 6,
+        "wikidata": "Q26539789",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12793736",
+      "geometry": { "type": "Point", "coordinates": [-2.237411, 53.477253] },
+      "properties": {
+        "xid": "Q26539908",
+        "name": "27, Sackville Street",
+        "rate": 6,
+        "wikidata": "Q26539908",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12794417",
+      "geometry": { "type": "Point", "coordinates": [-2.251487, 53.477638] },
+      "properties": {
+        "xid": "Q26546134",
+        "name": "11-17, St John Street",
+        "rate": 6,
+        "wikidata": "Q26546134",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12794424",
+      "geometry": { "type": "Point", "coordinates": [-2.251285, 53.477882] },
+      "properties": {
+        "xid": "Q26546249",
+        "name": "18 And 20, St John Street",
+        "rate": 6,
+        "wikidata": "Q26546249",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12794429",
+      "geometry": { "type": "Point", "coordinates": [-2.244053, 53.478138] },
+      "properties": {
+        "xid": "Q26546279",
+        "name": "Pair Of K6 Telephone Kiosks Near Library",
+        "rate": 6,
+        "wikidata": "Q26546279",
+        "kinds": "other,red_telephone_boxes,interesting_places"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12796061",
+      "geometry": { "type": "Point", "coordinates": [-2.251916, 53.477741] },
+      "properties": {
+        "xid": "Q26560747",
+        "name": "21-25, St John Street",
+        "rate": 6,
+        "wikidata": "Q26560747",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12796066",
+      "geometry": { "type": "Point", "coordinates": [-2.250662, 53.477764] },
+      "properties": {
+        "xid": "Q26560798",
+        "name": "8 And 8A, St John Street",
+        "rate": 6,
+        "wikidata": "Q26560798",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12796067",
+      "geometry": { "type": "Point", "coordinates": [-2.251719, 53.477673] },
+      "properties": {
+        "xid": "Q26560800",
+        "name": "19, St John Street",
+        "rate": 6,
+        "wikidata": "Q26560800",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12797327",
+      "geometry": { "type": "Point", "coordinates": [-2.238782, 53.478622] },
+      "properties": {
+        "xid": "Q26571954",
+        "name": "Fraser House",
+        "rate": 6,
+        "wikidata": "Q26571954",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12798235",
+      "geometry": { "type": "Point", "coordinates": [-2.25527, 53.476837] },
+      "properties": {
+        "xid": "Q26579573",
+        "name": "Power Hall Of Museum Of Science And Industry",
+        "rate": 6,
+        "wikidata": "Q26579573",
+        "kinds": "museums,cultural,interesting_places,other_museums"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12969144",
+      "geometry": { "type": "Point", "coordinates": [-2.246936, 53.479004] },
+      "properties": {
+        "xid": "Q26492358",
+        "name": "Lloyd\u0027s House",
+        "rate": 6,
+        "wikidata": "Q26492358",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12969560",
+      "geometry": { "type": "Point", "coordinates": [-2.239429, 53.478504] },
+      "properties": {
+        "xid": "Q26496598",
+        "name": "49, Faulkner Street",
+        "rate": 6,
+        "wikidata": "Q26496598",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12969561",
+      "geometry": { "type": "Point", "coordinates": [-2.240247, 53.476593] },
+      "properties": {
+        "xid": "Q26496606",
+        "name": "2, Harter Street",
+        "rate": 6,
+        "wikidata": "Q26496606",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12970341",
+      "geometry": { "type": "Point", "coordinates": [-2.238978, 53.478703] },
+      "properties": {
+        "xid": "Q26503475",
+        "name": "Lindencourt House",
+        "rate": 6,
+        "wikidata": "Q26503475",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12971365",
+      "geometry": { "type": "Point", "coordinates": [-2.235794, 53.475006] },
+      "properties": {
+        "xid": "Q26512899",
+        "name": "Granby House",
+        "rate": 6,
+        "wikidata": "Q26512899",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12974253",
+      "geometry": { "type": "Point", "coordinates": [-2.241204, 53.477928] },
+      "properties": {
+        "xid": "Q26539314",
+        "name": "26-30, Princess Street",
+        "rate": 6,
+        "wikidata": "Q26539314",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12974263",
+      "geometry": { "type": "Point", "coordinates": [-2.239142, 53.478344] },
+      "properties": {
+        "xid": "Q26539306",
+        "name": "52 And 54, Portland Street",
+        "rate": 6,
+        "wikidata": "Q26539306",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12974264",
+      "geometry": { "type": "Point", "coordinates": [-2.23971, 53.477489] },
+      "properties": {
+        "xid": "Q26539308",
+        "name": "Former Pickles Building",
+        "rate": 6,
+        "wikidata": "Q26539308",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12974271",
+      "geometry": { "type": "Point", "coordinates": [-2.241695, 53.476849] },
+      "properties": {
+        "xid": "Q26539407",
+        "name": "32, Dickinson Street",
+        "rate": 6,
+        "wikidata": "Q26539407",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12974315",
+      "geometry": { "type": "Point", "coordinates": [-2.25071, 53.474529] },
+      "properties": {
+        "xid": "Q26539791",
+        "name": "Rochdale Canal Lock Number 91 At East End Of Gaythorn Tunnel",
+        "rate": 6,
+        "wikidata": "Q26539791",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12976543",
+      "geometry": { "type": "Point", "coordinates": [-2.243613, 53.477715] },
+      "properties": {
+        "xid": "Q26560720",
+        "name": "Memorial Cross",
+        "rate": 6,
+        "wikidata": "Q26560720",
+        "kinds": "historic,monuments_and_memorials,burial_places,interesting_places,other_burial_places,monuments"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12976560",
+      "geometry": { "type": "Point", "coordinates": [-2.237741, 53.476753] },
+      "properties": {
+        "xid": "Q26560848",
+        "name": "51 And 53, Richmond Street",
+        "rate": 6,
+        "wikidata": "Q26560848",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12976589",
+      "geometry": { "type": "Point", "coordinates": [-2.239638, 53.478039] },
+      "properties": {
+        "xid": "Q26561061",
+        "name": "70 And 72, Portland Street",
+        "rate": 6,
+        "wikidata": "Q26561061",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12976591",
+      "geometry": { "type": "Point", "coordinates": [-2.245145, 53.477894] },
+      "properties": {
+        "xid": "Q26561084",
+        "name": "Adrift",
+        "rate": 6,
+        "wikidata": "Q26561084",
+        "kinds": "cultural,urban_environment,interesting_places,sculptures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12976600",
+      "geometry": { "type": "Point", "coordinates": [-2.245783, 53.47765] },
+      "properties": {
+        "xid": "Q26561144",
+        "name": "56-58, Peter Street",
+        "rate": 6,
+        "wikidata": "Q26561144",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12977794",
+      "geometry": { "type": "Point", "coordinates": [-2.240287, 53.478279] },
+      "properties": {
+        "xid": "Q26571867",
+        "name": "46, 48 And 50, Faulkner Street",
+        "rate": 6,
+        "wikidata": "Q26571867",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13149563",
+      "geometry": { "type": "Point", "coordinates": [-2.235556, 53.478405] },
+      "properties": {
+        "xid": "Q26492365",
+        "name": "Minshull House",
+        "rate": 6,
+        "wikidata": "Q26492365",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13149581",
+      "geometry": { "type": "Point", "coordinates": [-2.251695, 53.476036] },
+      "properties": {
+        "xid": "Q26492357",
+        "name": "Former Market Hall",
+        "rate": 6,
+        "wikidata": "Q26492357",
+        "kinds": "historic_architecture,architecture,interesting_places,shops,marketplaces,tourist_facilities,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13150721",
+      "geometry": { "type": "Point", "coordinates": [-2.23993, 53.479053] },
+      "properties": {
+        "xid": "Q26503470",
+        "name": "12, Charlotte Street",
+        "rate": 6,
+        "wikidata": "Q26503470",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13151725",
+      "geometry": { "type": "Point", "coordinates": [-2.240965, 53.478241] },
+      "properties": {
+        "xid": "Q26512841",
+        "name": "39 And 41, George Street",
+        "rate": 6,
+        "wikidata": "Q26512841",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13154511",
+      "geometry": { "type": "Point", "coordinates": [-2.246841, 53.478168] },
+      "properties": {
+        "xid": "Q26539060",
+        "name": "Harvester House",
+        "rate": 6,
+        "wikidata": "Q26539060",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13154588",
+      "geometry": { "type": "Point", "coordinates": [-2.248672, 53.474487] },
+      "properties": {
+        "xid": "Q26539790",
+        "name": "Rochdale Canal Lock Number 90, Approximately 30 Metres West Of Albion Bridge",
+        "rate": 6,
+        "wikidata": "Q26539790",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13154594",
+      "geometry": { "type": "Point", "coordinates": [-2.238305, 53.476151] },
+      "properties": {
+        "xid": "Q26539882",
+        "name": "Rochdale Canal Lock Number 87, To East Of Princess Street, With Cast Iron Footbridge Beside Street",
+        "rate": 6,
+        "wikidata": "Q26539882",
+        "kinds": "bridges,architecture,interesting_places,footbridges"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13154599",
+      "geometry": { "type": "Point", "coordinates": [-2.245847, 53.474365] },
+      "properties": {
+        "xid": "Q26539897",
+        "name": "Rochdale Canal Lock Number 89 (Tib Lock), On South Side Of Havelock Mills",
+        "rate": 6,
+        "wikidata": "Q26539897",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13156820",
+      "geometry": { "type": "Point", "coordinates": [-2.235684, 53.476959] },
+      "properties": {
+        "xid": "Q26560644",
+        "name": "The Shena Simon 6Th Form College",
+        "rate": 6,
+        "wikidata": "Q26560644",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13156850",
+      "geometry": { "type": "Point", "coordinates": [-2.238067, 53.474705] },
+      "properties": {
+        "xid": "Q26560904",
+        "name": "Manchester House",
+        "rate": 6,
+        "wikidata": "Q26560904",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13156864",
+      "geometry": { "type": "Point", "coordinates": [-2.240641, 53.476929] },
+      "properties": {
+        "xid": "Q26561083",
+        "name": "109 And 111, Portland Street",
+        "rate": 6,
+        "wikidata": "Q26561083",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13158120",
+      "geometry": { "type": "Point", "coordinates": [-2.240014, 53.478039] },
+      "properties": {
+        "xid": "Q26571869",
+        "name": "59 And 61, Faulkner Street",
+        "rate": 6,
+        "wikidata": "Q26571869",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13159141",
+      "geometry": { "type": "Point", "coordinates": [-2.237808, 53.474205] },
+      "properties": {
+        "xid": "Q26581133",
+        "name": "Lass O Gowrie Public House",
+        "rate": 6,
+        "wikidata": "Q26581133",
+        "kinds": "historic_architecture,architecture,interesting_places,pubs,foods,tourist_facilities,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13169842",
+      "geometry": { "type": "Point", "coordinates": [-2.238076, 53.476753] },
+      "properties": {
+        "xid": "Q26677759",
+        "name": "Former Warehouse",
+        "rate": 6,
+        "wikidata": "Q26677759",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13329684",
+      "geometry": { "type": "Point", "coordinates": [-2.253536, 53.476536] },
+      "properties": {
+        "xid": "Q26496579",
+        "name": "Museum Of Science And Industry, Air And Space Museum",
+        "rate": 6,
+        "wikidata": "Q26496579",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13329687",
+      "geometry": { "type": "Point", "coordinates": [-2.248383, 53.479191] },
+      "properties": {
+        "xid": "Q26496617",
+        "name": "Elliott House",
+        "rate": 6,
+        "wikidata": "Q26496617",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13330398",
+      "geometry": { "type": "Point", "coordinates": [-2.251906, 53.478077] },
+      "properties": {
+        "xid": "Q26503318",
+        "name": "15A, Byrom Street",
+        "rate": 6,
+        "wikidata": "Q26503318",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13330418",
+      "geometry": { "type": "Point", "coordinates": [-2.252099, 53.477592] },
+      "properties": {
+        "xid": "Q26503327",
+        "name": "Numbers 25 To 31 And Attached Former Chapel",
+        "rate": 6,
+        "wikidata": "Q26503327",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13334160",
+      "geometry": { "type": "Point", "coordinates": [-2.242051, 53.475929] },
+      "properties": {
+        "xid": "Q26538710",
+        "name": "61, Oxford Street",
+        "rate": 6,
+        "wikidata": "Q26538710",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13334228",
+      "geometry": { "type": "Point", "coordinates": [-2.238992, 53.478443] },
+      "properties": {
+        "xid": "Q26539389",
+        "name": "44-50, Portland Street",
+        "rate": 6,
+        "wikidata": "Q26539389",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13334261",
+      "geometry": { "type": "Point", "coordinates": [-2.240629, 53.47757] },
+      "properties": {
+        "xid": "Q26539703",
+        "name": "Manchester Chinese Chamber Of Commerce",
+        "rate": 6,
+        "wikidata": "Q26539703",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13334294",
+      "geometry": { "type": "Point", "coordinates": [-2.236615, 53.476398] },
+      "properties": {
+        "xid": "Q26539909",
+        "name": "46, Sackville Street",
+        "rate": 6,
+        "wikidata": "Q26539909",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13335054",
+      "geometry": { "type": "Point", "coordinates": [-2.24299, 53.474434] },
+      "properties": {
+        "xid": "Q26546502",
+        "name": "The Ritz Dance Hall",
+        "rate": 6,
+        "wikidata": "Q26546502",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13336621",
+      "geometry": { "type": "Point", "coordinates": [-2.236525, 53.477184] },
+      "properties": {
+        "xid": "Q26560850",
+        "name": "Rochdale Canal Boundary Wall To Canal Between Sackville Street And Chorlton Street",
+        "rate": 6,
+        "wikidata": "Q26560850",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13336626",
+      "geometry": { "type": "Point", "coordinates": [-2.238922, 53.476707] },
+      "properties": {
+        "xid": "Q26560880",
+        "name": "Brazil House",
+        "rate": 6,
+        "wikidata": "Q26560880",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13337853",
+      "geometry": { "type": "Point", "coordinates": [-2.249552, 53.478027] },
+      "properties": {
+        "xid": "Q26571878",
+        "name": "Former Entrance To Deansgate Goods Station Including Numbers 223 To 233",
+        "rate": 6,
+        "wikidata": "Q26571878",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13508986",
+      "geometry": { "type": "Point", "coordinates": [-2.245428, 53.478817] },
+      "properties": {
+        "xid": "Q26492260",
+        "name": "St Andrews Chambers",
+        "rate": 6,
+        "wikidata": "Q26492260",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13509381",
+      "geometry": { "type": "Point", "coordinates": [-2.254438, 53.47628] },
+      "properties": {
+        "xid": "Q26496578",
+        "name": "Former St Mathews Sunday School",
+        "rate": 6,
+        "wikidata": "Q26496578",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13509384",
+      "geometry": { "type": "Point", "coordinates": [-2.240512, 53.478054] },
+      "properties": {
+        "xid": "Q26496599",
+        "name": "56, Faulkner Street",
+        "rate": 6,
+        "wikidata": "Q26496599",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13509385",
+      "geometry": { "type": "Point", "coordinates": [-2.24077, 53.478386] },
+      "properties": {
+        "xid": "Q26496601",
+        "name": "35, 37 And 39A, George Street",
+        "rate": 6,
+        "wikidata": "Q26496601",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13510361",
+      "geometry": { "type": "Point", "coordinates": [-2.25055, 53.476166] },
+      "properties": {
+        "xid": "Q26505150",
+        "name": "235-291, Deansgate",
+        "rate": 6,
+        "wikidata": "Q26505150",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13514085",
+      "geometry": { "type": "Point", "coordinates": [-2.239979, 53.477085] },
+      "properties": {
+        "xid": "Q26539405",
+        "name": "Eastern House and Portland House",
+        "rate": 6,
+        "wikidata": "Q26539405",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13514086",
+      "geometry": { "type": "Point", "coordinates": [-2.241875, 53.476685] },
+      "properties": {
+        "xid": "Q26539408",
+        "name": "110-114, Portland Street",
+        "rate": 6,
+        "wikidata": "Q26539408",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13514117",
+      "geometry": { "type": "Point", "coordinates": [-2.241928, 53.478069] },
+      "properties": {
+        "xid": "Q26539699",
+        "name": "Princess Buildings",
+        "rate": 6,
+        "wikidata": "Q26539699",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13514874",
+      "geometry": { "type": "Point", "coordinates": [-2.251932, 53.478024] },
+      "properties": {
+        "xid": "Q26546256",
+        "name": "28, St John Street",
+        "rate": 6,
+        "wikidata": "Q26546256",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13514917",
+      "geometry": { "type": "Point", "coordinates": [-2.239611, 53.475918] },
+      "properties": {
+        "xid": "Q26546636",
+        "name": "Former Electricity Power Station",
+        "rate": 6,
+        "wikidata": "Q26546636",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13516457",
+      "geometry": { "type": "Point", "coordinates": [-2.250227, 53.477592] },
+      "properties": {
+        "xid": "Q26560802",
+        "name": "K6 Telephone Kiosk In Front Of St John Street Chambers",
+        "rate": 6,
+        "wikidata": "Q26560802",
+        "kinds": "other,red_telephone_boxes,interesting_places"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13516466",
+      "geometry": { "type": "Point", "coordinates": [-2.23861, 53.476505] },
+      "properties": {
+        "xid": "Q26560919",
+        "name": "109, Princess Street",
+        "rate": 6,
+        "wikidata": "Q26560919",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13516507",
+      "geometry": { "type": "Point", "coordinates": [-2.240227, 53.478333] },
+      "properties": {
+        "xid": "Q26561400",
+        "name": "16, Nicholas Street",
+        "rate": 6,
+        "wikidata": "Q26561400",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13517397",
+      "geometry": { "type": "Point", "coordinates": [-2.247672, 53.474709] },
+      "properties": {
+        "xid": "Q26568893",
+        "name": "13-17, Albion Street",
+        "rate": 6,
+        "wikidata": "Q26568893",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13518608",
+      "geometry": { "type": "Point", "coordinates": [-2.253335, 53.478298] },
+      "properties": {
+        "xid": "Q26579456",
+        "name": "Two Bollards At West End Of St Johns Passage",
+        "rate": 6,
+        "wikidata": "Q26579456",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13518785",
+      "geometry": { "type": "Point", "coordinates": [-2.245985, 53.478672] },
+      "properties": {
+        "xid": "Q26581158",
+        "name": "1-5, Central Street",
+        "rate": 6,
+        "wikidata": "Q26581158",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "9215686",
+      "geometry": { "type": "Point", "coordinates": [-2.247823, 53.474319] },
+      "properties": {
+        "xid": "N1286141414",
+        "name": "The Haçienda",
+        "rate": 2,
+        "osm": "node/1286141414",
+        "wikidata": "Q1390959",
+        "kinds": "other,unclassified_objects,interesting_places,historic_object"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12373917",
+      "geometry": { "type": "Point", "coordinates": [-2.2437, 53.4771] },
+      "properties": {
+        "xid": "Q7243739",
+        "name": "Prince\u0027s Theatre",
+        "rate": 2,
+        "wikidata": "Q7243739",
+        "kinds": "theatres_and_entertainments,cultural,interesting_places,other_theatres"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12628229",
+      "geometry": { "type": "Point", "coordinates": [-2.251869, 53.477406] },
+      "properties": {
+        "xid": "Q26675716",
+        "name": "Manchester \u0026 Salford Junction Canal Tunnel",
+        "rate": 5,
+        "wikidata": "Q26675716",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12809290",
+      "geometry": { "type": "Point", "coordinates": [-2.240158, 53.476822] },
+      "properties": {
+        "xid": "Q26681262",
+        "name": "Langley Buildings",
+        "rate": 5,
+        "wikidata": "Q26681262",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13331534",
+      "geometry": { "type": "Point", "coordinates": [-2.252538, 53.475918] },
+      "properties": {
+        "xid": "Q26513948",
+        "name": "29-41, Liverpool Road",
+        "rate": 5,
+        "wikidata": "Q26513948",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13477576",
+      "geometry": { "type": "Point", "coordinates": [-2.25356, 53.474701] },
+      "properties": {
+        "xid": "Q17650667",
+        "name": "Remains of eastern wall of the Roman fort",
+        "rate": 5,
+        "wikidata": "Q17650667",
+        "kinds": "historic,archaeology,interesting_places,other_archaeological_sites"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3499487",
+      "geometry": { "type": "Point", "coordinates": [-2.248775, 53.477886] },
+      "properties": {
+        "xid": "W570281429",
+        "name": "Amphitheatre",
+        "rate": 1,
+        "osm": "way/570281429",
+        "kinds": "cultural,theatres_and_entertainments,interesting_places,other_theatres"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3538019",
+      "geometry": { "type": "Point", "coordinates": [-2.249664, 53.47641] },
+      "properties": {
+        "xid": "N307874659",
+        "name": "AMC Manchester",
+        "rate": 1,
+        "osm": "node/307874659",
+        "kinds": "cultural,cinemas,theatres_and_entertainments,interesting_places"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3570177",
+      "geometry": { "type": "Point", "coordinates": [-2.251641, 53.47435] },
+      "properties": {
+        "xid": "N3678936268",
+        "name": "Bicycle",
+        "rate": 1,
+        "osm": "node/3678936268",
+        "kinds": "urban_environment,cultural,interesting_places,installation"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3698657",
+      "geometry": { "type": "Point", "coordinates": [-2.253403, 53.475548] },
+      "properties": {
+        "xid": "N4151560793",
+        "name": "Begbies Traynor;Sheep",
+        "rate": 1,
+        "osm": "node/4151560793",
+        "kinds": "urban_environment,cultural,interesting_places,sculptures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3851952",
+      "geometry": { "type": "Point", "coordinates": [-2.243212, 53.478748] },
+      "properties": {
+        "xid": "N6028333543",
+        "name": "Memorial to the British Nuclear Test Veterans",
+        "rate": 1,
+        "osm": "node/6028333543",
+        "kinds": "historic,monuments_and_memorials,interesting_places,monuments"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3893536",
+      "geometry": { "type": "Point", "coordinates": [-2.236589, 53.476925] },
+      "properties": {
+        "xid": "N1295065994",
+        "name": "Beacon of Hope",
+        "rate": 1,
+        "osm": "node/1295065994",
+        "kinds": "historic,monuments_and_memorials,interesting_places,monuments"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3923517",
+      "geometry": { "type": "Point", "coordinates": [-2.237069, 53.476898] },
+      "properties": {
+        "xid": "N2641956330",
+        "name": "Mathew Perrin Memorial",
+        "rate": 1,
+        "osm": "node/2641956330",
+        "kinds": "historic,monuments_and_memorials,interesting_places,monuments"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3938349",
+      "geometry": { "type": "Point", "coordinates": [-2.251996, 53.478523] },
+      "properties": {
+        "xid": "N3403995150",
+        "name": "Blue Plaque: Sir Edward Frankland and Sir Henry Enfield Roscoe",
+        "rate": 1,
+        "osm": "node/3403995150",
+        "kinds": "historic,monuments_and_memorials,interesting_places,monuments"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3944162",
+      "geometry": { "type": "Point", "coordinates": [-2.242218, 53.478497] },
+      "properties": {
+        "xid": "N3687364163",
+        "name": "Blue Plaque: Frederick Crace Calvert",
+        "rate": 1,
+        "osm": "node/3687364163",
+        "kinds": "historic,monuments_and_memorials,interesting_places,monuments"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3997212",
+      "geometry": { "type": "Point", "coordinates": [-2.251883, 53.47826] },
+      "properties": {
+        "xid": "N6319327258",
+        "name": "\u0027Bonny Prince Charlie\u0027 used this site as a gun park",
+        "rate": 1,
+        "osm": "node/6319327258",
+        "kinds": "historic,monuments_and_memorials,interesting_places,monuments"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "4016922",
+      "geometry": { "type": "Point", "coordinates": [-2.245525, 53.479118] },
+      "properties": {
+        "xid": "N2867748970",
+        "name": "William Ewart Gladstone",
+        "rate": 1,
+        "osm": "node/2867748970",
+        "kinds": "historic,monuments_and_memorials,urban_environment,cultural,interesting_places,sculptures,monuments"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "4873334",
+      "geometry": { "type": "Point", "coordinates": [-2.247901, 53.477913] },
+      "properties": {
+        "xid": "W30326380",
+        "name": "Fourth Church of Christ, Scientist",
+        "rate": 1,
+        "osm": "way/30326380",
+        "kinds": "religion,other_temples,interesting_places"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "5051709",
+      "geometry": { "type": "Point", "coordinates": [-2.250081, 53.477726] },
+      "properties": {
+        "xid": "N3991423209",
+        "name": "Church of Scientology",
+        "rate": 1,
+        "osm": "node/3991423209",
+        "kinds": "religion,other_temples,interesting_places"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12311646",
+      "geometry": { "type": "Point", "coordinates": [-2.24247, 53.475788] },
+      "properties": {
+        "xid": "Q39411807",
+        "name": "Manchester Hippodrome Theatre",
+        "rate": 1,
+        "wikidata": "Q39411807",
+        "kinds": "architecture,historic_architecture,theatres_and_entertainments,cultural,cinemas,interesting_places,destroyed_objects"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12311647",
+      "geometry": { "type": "Point", "coordinates": [-2.24067, 53.478699] },
+      "properties": {
+        "xid": "Q39411875",
+        "name": "Wilton Cinema",
+        "rate": 1,
+        "wikidata": "Q39411875",
+        "kinds": "cinemas,cultural,theatres_and_entertainments,interesting_places"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13034147",
+      "geometry": { "type": "Point", "coordinates": [-2.249834, 53.477367] },
+      "properties": {
+        "xid": "Q39411692",
+        "name": "AMC Great Northern 16",
+        "rate": 1,
+        "wikidata": "Q39411692",
+        "kinds": "cinemas,cultural,theatres_and_entertainments,interesting_places"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13071101",
+      "geometry": { "type": "Point", "coordinates": [-2.24156, 53.475471] },
+      "properties": {
+        "xid": "Q57933236",
+        "name": "St. James\u0027s Hall",
+        "rate": 1,
+        "wikidata": "Q57933236",
+        "kinds": "architecture,historic_architecture,theatres_and_entertainments,cultural,concert_halls,cinemas,interesting_places,destroyed_objects"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13214326",
+      "geometry": { "type": "Point", "coordinates": [-2.242057, 53.475639] },
+      "properties": {
+        "xid": "Q39411744",
+        "name": "Gaumont Manchester",
+        "rate": 1,
+        "wikidata": "Q39411744",
+        "kinds": "architecture,historic_architecture,cinemas,cultural,theatres_and_entertainments,interesting_places,destroyed_objects"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13214327",
+      "geometry": { "type": "Point", "coordinates": [-2.24067, 53.478699] },
+      "properties": {
+        "xid": "Q39411775",
+        "name": "Glamour Cinema",
+        "rate": 1,
+        "wikidata": "Q39411775",
+        "kinds": "cinemas,cultural,theatres_and_entertainments,interesting_places"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13214328",
+      "geometry": { "type": "Point", "coordinates": [-2.242057, 53.475639] },
+      "properties": {
+        "xid": "Q39411825",
+        "name": "New Oxford Theatre",
+        "rate": 1,
+        "wikidata": "Q39411825",
+        "kinds": "cinemas,cultural,theatres_and_entertainments,interesting_places"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13574315",
+      "geometry": { "type": "Point", "coordinates": [-2.243112, 53.476776] },
+      "properties": {
+        "xid": "Q39411719",
+        "name": "Cameo Cinema",
+        "rate": 1,
+        "wikidata": "Q39411719",
+        "kinds": "architecture,historic_architecture,cinemas,cultural,theatres_and_entertainments,interesting_places,destroyed_objects"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "706834",
+      "geometry": { "type": "Point", "coordinates": [-2.23941, 53.476017] },
+      "properties": {
+        "xid": "W663002723",
+        "name": "",
+        "rate": 0,
+        "osm": "way/663002723",
+        "kinds": "other,unclassified_objects,interesting_places,historic_object"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3567715",
+      "geometry": { "type": "Point", "coordinates": [-2.241667, 53.474083] },
+      "properties": {
+        "xid": "N1502900383",
+        "name": "",
+        "rate": 0,
+        "osm": "node/1502900383",
+        "kinds": "urban_environment,cultural,interesting_places,installation"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3704368",
+      "geometry": { "type": "Point", "coordinates": [-2.243771, 53.477654] },
+      "properties": {
+        "xid": "N6028408735",
+        "name": "",
+        "rate": 0,
+        "osm": "node/6028408735",
+        "kinds": "urban_environment,cultural,interesting_places,sculptures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3965931",
+      "geometry": { "type": "Point", "coordinates": [-2.254353, 53.476738] },
+      "properties": {
+        "xid": "N4740546135",
+        "name": "",
+        "rate": 0,
+        "osm": "node/4740546135",
+        "kinds": "historic,monuments_and_memorials,interesting_places,monuments"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3988464",
+      "geometry": { "type": "Point", "coordinates": [-2.252637, 53.477974] },
+      "properties": {
+        "xid": "N5816022427",
+        "name": "",
+        "rate": 0,
+        "osm": "node/5816022427",
+        "kinds": "historic,monuments_and_memorials,interesting_places,monuments"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "9308879",
+      "geometry": { "type": "Point", "coordinates": [-2.247999, 53.478817] },
+      "properties": {
+        "xid": "W30343430",
+        "name": "",
+        "rate": 0,
+        "osm": "way/30343430",
+        "kinds": "religion,synagogues,interesting_places"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "9810061",
+      "geometry": { "type": "Point", "coordinates": [-2.240183, 53.476032] },
+      "properties": {
+        "xid": "W243444480",
+        "name": "",
+        "rate": 0,
+        "osm": "way/243444480",
+        "kinds": "urban_environment,cultural,interesting_places,squares"
+      }
+    }
+  ]
+}

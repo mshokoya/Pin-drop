@@ -1,5 +1,6 @@
 import {gql} from '@apollo/client';
 import {apolloClient} from '../../services/apollo';
+import {IPlacesQuery} from '../types';
 
 export interface IFetchPlaces {
   maxLat: number;
@@ -19,8 +20,7 @@ export const fetchPlacesHook = async ({maxLat, minLat, maxLng, minLng,kind}: IFe
     }
   `
   
-  const {data, loading, error,} = await apolloClient.query({query});
-  console.log({data, loading, error})
+  const {data, loading, error} = await apolloClient.query<IPlacesQuery>({query, fetchPolicy: 'network-only'});
 
   return {data, loading, error}
 }

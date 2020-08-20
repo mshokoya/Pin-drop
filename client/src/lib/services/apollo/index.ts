@@ -5,20 +5,25 @@ import { setContext } from '@apollo/client/link/context';
 import {RestLink} from 'apollo-link-rest';
 
 // openTripMap
-const link1 = new RestLink({endpoints: {places:`${process.env.REACT_APP_OPENTRIPMAP_URL}/places/bbox?apikey=${process.env.REACT_APP_OPENTRIPMAP_API_KEY}` }})
+const extUri = new RestLink({
+  endpoints: {
+    places:`${process.env.REACT_APP_OPENTRIPMAP_URL}/places/bbox?apikey=${process.env.REACT_APP_OPENTRIPMAP_API_KEY}`,
+    geocoding: `${process.env.REACT_APP_MAPBOX_URL}/geocoding/${process.env.REACT_APP_MAPBOX_VERSION}`
+  }
+});
 
-const link2 = setContext(() => {
+const context = setContext(() => {
   const token = sessionStorage.getItem('token');
   return {
     headers: { 'X-CSRF-TOKEN': token || '' },
   };
 });
 
-const link3 = createHttpLink({ uri: process.env.BACKEND_URI });
+const httpLink = createHttpLink({ uri: process.env.BACKEND_URI });
 
 const apolloClient = new ApolloClient({
   cache: new InMemoryCache(),
-  link: from([link1,link2,link3]),
+  link: from([extUri,context,httpLink]),
 });
 
 export {apolloClient}

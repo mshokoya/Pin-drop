@@ -11,11 +11,9 @@ mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN as string;
 
 ReactDOM.render(
   <ApolloProvider client={apolloClient}>
-    <React.StrictMode>
-      <StateProvider>
-        <App />
-      </StateProvider>
-    </React.StrictMode>
+    <StateProvider>
+      <App />
+    </StateProvider>
   </ApolloProvider>,
   document.getElementById('root'),
 );

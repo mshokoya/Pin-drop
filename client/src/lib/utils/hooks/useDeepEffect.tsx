@@ -1,16 +1,19 @@
 import { useEffect, useRef } from 'react';
 import isEqual from 'lodash.isequal';
-import { isObject } from 'util';
 
 export default (
   fn: () => void, 
-  deps: ({[key: string]: any} | null)[]
+  deps: ( 
+    {[key: string]: any}
+    | undefined 
+    | string[]
+  )[]
 ) =>  {
   const isFirst = useRef(true);
   const prevDeps = useRef(deps);
 
   useEffect(() => {
-    if (!isObject(deps[0])) return;
+    if (deps[0] === undefined) return;
 
     const isSame = prevDeps.current.every((obj, index) =>
       isEqual(obj, deps[index])

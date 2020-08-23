@@ -4,40 +4,45 @@ import { Sidebar } from '../../components/Sidebar';
 import {Map} from '../../components/Map';
 import {fetchPlacesHook} from '../../lib/utils/hooks/openTripApiHook';
 import {IPos} from './types';
-import {IPlaces} from '../../lib/utils/types';
-import HashMap from '../../lib/utils/helpers/hashMap';
-
-type I = {[key: string]: IPlaces}
+import {UPlacesHash, IKind} from '../../lib/utils/types';
+import {hashPlacesObj} from '../../lib/utils/helpers/hashPlacesObj';
 
 export const Home = () => {
-  const [pos, setPos] = useState<IPos|null>(null)
-  const [allPlaces, setAllPlaces] = useState<I|null>(null)
-  const [newPlaces, setNewPlaces] = useState<I|null>(null)
-  const hashmap = useRef<HashMap<IPlaces>>(new HashMap<IPlaces>('id'));
+  const [pos, setPos] = useState<IPos>()
+  const [allPlaces, setAllPlaces] = useState<UPlacesHash>({})
+  const [newPlaces, setNewPlaces] = useState<UPlacesHash>({})
+  const [allKinds, setAllKinds] = useState<IKind>({})
 
   useDeepEffect(async() => {
+    if (pos){
       try {
         const res = await fetchPlacesHook({
-          maxLat: pos!.maxLat, 
-          minLat: pos!.minLat,
-          maxLng: pos!.maxLng,
-          minLng: pos!.minLng,
+          maxLat: pos.maxLat, 
+          minLat: pos.minLat,
+          maxLng: pos.maxLng,
+          minLng: pos.minLng,
         });
         
         if (res.data && res.data.places){
-          setNewPlaces(hashmap.current.newValuesOnly(res.data.places.features))
+          const {newPlaces, hash, kinds} = hashPlacesObj({
+            places: res.data.places.features, 
+            hash: allPlaces,
+            kinds: allKinds
+          });
+          setNewPlaces(newPlaces);
+          setAllKinds({...kinds});
+          setAllPlaces(hash);
         }
-        setAllPlaces(hashmap.current.hashmap)
       } catch (error) {
-        console.log('error')
+        console.log(error.message)
       }
-
+    }
   }, [pos]);
 
 
   return (
     <div className='home'>
-      <Sidebar />
+      <Sidebar allPlaces={allPlaces} newPlaces={newPlaces} kinds={allKinds} />
       <Map setPos={setPos} pos={pos} places={newPlaces} key='1'/>
     </div>
   )

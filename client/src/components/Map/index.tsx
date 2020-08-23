@@ -4,8 +4,8 @@ import {IPos} from './types';
 import mapboxgl from 'mapbox-gl';
 
 interface Props {
-  pos: IPos | null;
-  setPos: React.Dispatch<React.SetStateAction<IPos | null>>;
+  pos?: IPos;
+  setPos: React.Dispatch<React.SetStateAction<IPos | undefined>>;
   places: any;
 }
 
@@ -17,7 +17,7 @@ const DEFAULT_ZOOM = 15;
 const DEFAULT_STREET_VIEW = "mapbox://styles/mapbox/streets-v11";
 
 export const Map = ({pos, setPos, places}: Props) => {
-  const [map, setMap] = useState<mapboxgl.Map|null>(null);
+  const [map, setMap] = useState<mapboxgl.Map>();
   const mapContainer = useRef<HTMLElement|null>(null);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export const Map = ({pos, setPos, places}: Props) => {
   }, []);
 
   useDeepEffect(() => {
-    if (map !== null) {
+    if (map !== undefined) {
       for (let key in places){
         new mapboxgl.Marker()
         .setLngLat(places[key].geometry.coordinates)
@@ -75,52 +75,52 @@ export const Map = ({pos, setPos, places}: Props) => {
     }
   }
   
-    const getLocation = (callback: any): void => {
-      navigator.geolocation.getCurrentPosition((vals) => {
-        const {latitude, longitude} = vals.coords;
-        callback(longitude, latitude);
-      });
-    }
+  const getLocation = (callback: any): void => {
+    navigator.geolocation.getCurrentPosition((vals) => {
+      const {latitude, longitude} = vals.coords;
+      callback(longitude, latitude);
+    });
+  }
   
-    const mapInit = (longitude?: number, latitude?: number) => {
-      const map = new mapboxgl.Map({
-        container: mapContainer.current as HTMLElement,
-        zoom: DEFAULT_ZOOM,
-        center: {
-          lng: longitude || DEFAULT_LOCATION.longitude , 
-          lat: latitude || DEFAULT_LOCATION.latitude
-        },
-        style: DEFAULT_STREET_VIEW
-      });
-  
-      map.on('load', async () => {
-        // @ts-ignore
-        const {_ne, _sw} = map.getBounds();
-        const zoom = map.getZoom()
-        setPos({
-          maxLat: _ne.lat, 
-          maxLng: _ne.lng,
-          minLat: _sw.lat,
-          minLng: _sw.lng,
-          zoom
-        });
-      })
-  
-      map.on('dragend', () => {
-        // @ts-ignore
-        const {_ne, _sw} = map.getBounds();
-        const zoom = map.getZoom();
-        setPos({
-          maxLat: _ne.lat,
-          maxLng: _ne.lng,
-          minLat: _sw.lat,
-          minLng: _sw.lng,
-          zoom
-        });
-      });
+  const mapInit = (longitude?: number, latitude?: number) => {
+    const map = new mapboxgl.Map({
+      container: mapContainer.current as HTMLElement,
+      zoom: DEFAULT_ZOOM,
+      center: {
+        lng: longitude || DEFAULT_LOCATION.longitude , 
+        lat: latitude || DEFAULT_LOCATION.latitude
+      },
+      style: DEFAULT_STREET_VIEW
+    });
 
-      setMap(map);
-    }
+    map.on('load', async () => {
+      // @ts-ignore
+      const {_ne, _sw} = map.getBounds();
+      const zoom = map.getZoom()
+      setPos({
+        maxLat: _ne.lat, 
+        maxLng: _ne.lng,
+        minLat: _sw.lat,
+        minLng: _sw.lng,
+        zoom
+      });
+    })
+  
+    map.on('dragend', () => {
+      // @ts-ignore
+      const {_ne, _sw} = map.getBounds();
+      const zoom = map.getZoom();
+      setPos({
+        maxLat: _ne.lat,
+        maxLng: _ne.lng,
+        minLat: _sw.lat,
+        minLng: _sw.lng,
+        zoom
+      });
+    });
+
+    setMap(map);
+  }
   
   return <div className='map' ref={el => (mapContainer.current = el)}/>
 };

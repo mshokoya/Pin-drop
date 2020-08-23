@@ -21,6 +21,8 @@ export const fetchPlacesHook = async ({maxLat, minLat, maxLng, minLng,kind}: IFe
   `
   
   const {data, loading, error} = await apolloClient.query<IPlacesQuery>({query, fetchPolicy: 'network-only'});
+  // @ts-ignore
+  
 
-  return {data, loading, error}
+  return JSON.parse(JSON.stringify({data, loading, error}))
 }

@@ -1,5 +1,5 @@
 import {IPlaces, UPlacesHash, IKind} from '../types';
-
+import _isEmpty from 'lodash.isempty';
 interface Args {
   places: IPlaces[];
   hash: UPlacesHash;
@@ -21,7 +21,7 @@ export const hashPlacesObj = ({hash, places, kinds}: Args):
       .split(',')
       .forEach((k: any) => {
         return newKinds[k] 
-          ? newKinds[k][obj.id]
+          ? !_isEmpty(newKinds[k])
               ? newKinds[k][obj.id] = true
               : {[obj.id]: true}
           : newKinds[k] = {[obj.id]: true}

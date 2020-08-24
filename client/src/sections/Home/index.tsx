@@ -12,6 +12,7 @@ export const Home = () => {
   const [allPlaces, setAllPlaces] = useState<UPlacesHash>({})
   const [newPlaces, setNewPlaces] = useState<UPlacesHash>({})
   const [allKinds, setAllKinds] = useState<IKind>({})
+  const [kindsFilter, setKindsFilter] = useState<{[key: string]:boolean}>({})
 
   useDeepEffect(async() => {
     if (pos){
@@ -22,16 +23,16 @@ export const Home = () => {
           maxLng: pos.maxLng,
           minLng: pos.minLng,
         });
-        
+
         if (res.data && res.data.places){
           const {newPlaces, hash, kinds} = hashPlacesObj({
             places: res.data.places.features, 
             hash: allPlaces,
             kinds: allKinds
           });
+          setAllPlaces(hash);
           setNewPlaces(newPlaces);
           setAllKinds({...kinds});
-          setAllPlaces(hash);
         }
       } catch (error) {
         console.log(error.message)
@@ -42,8 +43,21 @@ export const Home = () => {
 
   return (
     <div className='home'>
-      <Sidebar allPlaces={allPlaces} newPlaces={newPlaces} kinds={allKinds} />
-      <Map setPos={setPos} pos={pos} places={newPlaces} key='1'/>
+      <Sidebar 
+        allPlaces={allPlaces} 
+        newPlaces={newPlaces} 
+        kinds={allKinds}
+        kindsFilter={kindsFilter}
+        setKindsFilter={setKindsFilter}
+      />
+      <Map 
+        setPos={setPos} 
+        pos={pos} 
+        newPlaces={newPlaces} 
+        kindsFilter={kindsFilter}
+        allKinds={allKinds}
+        allPlaces={allPlaces}
+        key='1'/>
     </div>
   )
 };

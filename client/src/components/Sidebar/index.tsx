@@ -7,9 +7,11 @@ interface Props {
   allPlaces?: UPlacesHash;
   newPlaces?: UPlacesHash;
   kinds: IKind;
+  kindsFilter: {[key: string]:boolean};
+  setKindsFilter: React.Dispatch<React.SetStateAction<{[key: string]:boolean}>>
 }
 
-export const Sidebar = React.memo(({allPlaces, newPlaces, kinds}: Props) => {
+export const Sidebar = React.memo(({allPlaces, newPlaces, kinds, kindsFilter, setKindsFilter}: Props) => {
   return (
     <div className="sidebar">
       <Header />
@@ -19,7 +21,13 @@ export const Sidebar = React.memo(({allPlaces, newPlaces, kinds}: Props) => {
         <div>Comments</div>
       </div>
       <div className='sidebar__comp'>
-        <PlacesBar allPlaces={allPlaces} newPlaces={newPlaces} kinds={kinds}/>
+        <PlacesBar 
+          allPlaces={allPlaces} 
+          newPlaces={newPlaces} 
+          kinds={kinds} 
+          kindsFilter={kindsFilter} 
+          setKindsFilter={setKindsFilter}
+        />
       </div>
     </div>
   )

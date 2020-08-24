@@ -1,38 +1,38 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import {UPlacesHash, IKind} from '../../../../lib/utils/types';
 import useDeepEqual from '../../../../lib/utils/hooks/useDeepEffect';
+import {FilterBox} from '../../../FilterBox';
 
 interface Props {
   allPlaces?: UPlacesHash;
   newPlaces?: UPlacesHash;
   kinds: IKind;
+  kindsFilter: {[key: string]:boolean};
+  setKindsFilter: React.Dispatch<React.SetStateAction<{[key: string]:boolean}>>
 }
 
-export const PlacesBar = ({allPlaces, newPlaces, kinds}: Props) => {
-  const kindsList = useRef(Object.keys(kinds));
+export const PlacesBar = ({allPlaces, newPlaces, kinds, kindsFilter, setKindsFilter}: Props) => {
+  // const kindsList = useRef(Object.keys(kinds));
+  const [kindsList, setKindsList] = useState<string[]>(Object.keys(kinds));
 
   useDeepEqual(() => {
-    kindsList.current = Object.keys(kinds)
-    console.log(kindsList.current.length)
+    setKindsList(Object.keys(kinds))
+    // console.log(kindsList.length)
   }, [kinds]);
+
+  const applyKindsFilter = (filter: {[key: string]:boolean}) => {
+    setKindsFilter(filter)
+  }
 
   return (
     <div className='places'>
       <div className='places__interests'>
         <span>Interests</span>
-        <div>
-          {
-            kindsList.current.map((v, idx) => (
-              <span className='places__interests-icon' key={idx}>
-                {v}
-              </span>
-            ))
-          }
-        </div>
       </div>
+      <FilterBox kindsList={kindsList} kindsFilter={kindsFilter} applyFilter={applyKindsFilter}/>
 
       <div className='places__location'>
-          {
+          {/* {
             allPlaces && Object.keys(allPlaces).map((key, idx) => (
               <div className='places__location-wrap' key={idx}>
                 <div className='places__location-name-wrap'>
@@ -40,7 +40,7 @@ export const PlacesBar = ({allPlaces, newPlaces, kinds}: Props) => {
                 </div>
               </div>
             ))
-          }
+          } */}
       </div>
     </div>
   )

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import isEqual from 'lodash.isequal';
+import isEmpty from 'lodash.isempty';
 
 export default (
   fn: () => void, 
@@ -13,7 +14,7 @@ export default (
   const prevDeps = useRef(deps);
 
   useEffect(() => {
-    if (deps[0] === undefined) return;
+    // if (isEmpty(deps[0])) return;
 
     const isSame = prevDeps.current.every((obj, index) =>
       isEqual(obj, deps[index])

@@ -1,11 +1,11 @@
-import React, {useState, useRef} from 'react';
-import useDeepEffect from '../../lib/utils/hooks/useDeepEffect';
+import React, {useState, useMemo} from 'react';
 import { Sidebar } from '../../components/Sidebar';
 import {Map} from '../../components/Map';
-import {fetchPlacesHook} from '../../lib/utils/hooks/openTripApiHook';
+import {fetchPlacesHook, useDeepEffect, fetchImagesHook} from '../../lib/utils/hooks';
 import {IPos} from './types';
 import {UPlacesHash, IKind} from '../../lib/utils/types';
 import {hashPlacesObj} from '../../lib/utils/helpers/hashPlacesObj';
+
 
 export const Home = () => {
   const [pos, setPos] = useState<IPos>()
@@ -13,8 +13,10 @@ export const Home = () => {
   const [newPlaces, setNewPlaces] = useState<UPlacesHash>({})
   const [allKinds, setAllKinds] = useState<IKind>({})
   const [kindsFilter, setKindsFilter] = useState<{[key: string]:boolean}>({})
+  const images = useMemo(() => fetchImagesHook(), []);
 
   useDeepEffect(async() => {
+    console.log(images)
     if (pos){
       try {
         const res = await fetchPlacesHook({
@@ -57,6 +59,7 @@ export const Home = () => {
         kindsFilter={kindsFilter}
         allKinds={allKinds}
         allPlaces={allPlaces}
+        setAllPlaces={setAllPlaces}
         key='1'/>
     </div>
   )

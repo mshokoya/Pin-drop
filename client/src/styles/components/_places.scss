@@ -1,3 +1,17 @@
-// .places{
-//   width: 100%
-// }
+.places{
+  display: flex;
+  flex-direction: column;
+
+  &__location{
+    width: 97%;
+    margin: 0 auto;
+
+    &-wrap{
+      background-color: white;
+      display: flex;
+      align-items: center;
+      height: 4rem;
+      margin-bottom: 2rem;
+    }
+  }
+}

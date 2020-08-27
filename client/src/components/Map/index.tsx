@@ -13,6 +13,7 @@ interface Props {
   kindsFilter: {[key: string]:boolean};
   allKinds: IKind;
   allPlaces: UPlacesHash
+  setAllPlaces: React.Dispatch<UPlacesHash>
 }
 
 const DEFAULT_LOCATION = {
@@ -22,7 +23,7 @@ const DEFAULT_LOCATION = {
 const DEFAULT_ZOOM = 15;
 const DEFAULT_STREET_VIEW = "mapbox://styles/mapbox/streets-v11";
 
-export const Map = ({pos, setPos, newPlaces, allPlaces, kindsFilter, allKinds}: Props) => {
+export const Map = ({pos, setPos, newPlaces, allPlaces, kindsFilter, allKinds, setAllPlaces}: Props) => {
   // turn markers into hashmap with id as key, this is for optimised mapping
   const markersRef = useRef<mapboxgl.Marker[]>([])
   const filterMarkersRef = useRef<mapboxgl.Marker[]>([])
@@ -113,6 +114,7 @@ export const Map = ({pos, setPos, newPlaces, allPlaces, kindsFilter, allKinds}: 
   
   const mapInit = (longitude?: number, latitude?: number) => {
     if (map) removeMarkers(markersRef.current);
+    if (!_isEmpty(allPlaces)) setAllPlaces({});
 
     const newMap = new mapboxgl.Map({
       container: mapContainer.current as HTMLElement,
@@ -161,7 +163,7 @@ export const Map = ({pos, setPos, newPlaces, allPlaces, kindsFilter, allKinds}: 
   };
 
   const createMarkers = (mL:mapboxgl.Marker[], hash: UPlacesHash) => {
-    _map(hash, (hV, hK) => {
+    _map(hash, (_hV, hK) => {
       mL.push(
         new mapboxgl.Marker()
         .setLngLat(hash[hK].geometry.coordinates)
@@ -173,8 +175,8 @@ export const Map = ({pos, setPos, newPlaces, allPlaces, kindsFilter, allKinds}: 
   const kindPlaceFilter = (
     callback: (value: string) => void
   ) => {
-    _map(kindsFilter, (oV, oK)=> {
-      _map(allKinds[oK], (iV, iK) => {
+    _map(kindsFilter, (_oV, oK)=> {
+      _map(allKinds[oK], (_iV, iK) => {
         callback(iK)
       });
     });

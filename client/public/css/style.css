@@ -31,6 +31,7 @@ body {
       margin-right: 2rem; }
 
 .sidebar {
+  background-color: #fbf7f1;
   height: 100%;
   overflow: hidden;
   width: 100%;
@@ -38,6 +39,19 @@ body {
   flex-direction: column; }
   .sidebar__comp {
     overflow: scroll; }
+
+.places {
+  display: flex;
+  flex-direction: column; }
+  .places__location {
+    width: 97%;
+    margin: 0 auto; }
+    .places__location-wrap {
+      background-color: white;
+      display: flex;
+      align-items: center;
+      height: 4rem;
+      margin-bottom: 2rem; }
 
 .home {
   display: grid;

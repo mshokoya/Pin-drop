@@ -2,6 +2,7 @@ import React, {useRef, useState} from 'react';
 import {UPlacesHash, IKind} from '../../../../lib/utils/types';
 import useDeepEqual from '../../../../lib/utils/hooks/useDeepEffect';
 import {FilterBox} from '../../../FilterBox';
+import _map from 'lodash.map';
 
 interface Props {
   allPlaces?: UPlacesHash;
@@ -29,10 +30,10 @@ export const PlacesBar = ({allPlaces, newPlaces, kinds, kindsFilter, setKindsFil
       <div className='places__interests'>
         <span>Interests</span>
       </div>
-      <FilterBox kindsList={kindsList} kindsFilter={kindsFilter} applyFilter={applyKindsFilter}/>
+      {/* <FilterBox kindsList={kindsList} kindsFilter={kindsFilter} applyFilter={applyKindsFilter}/> */}
 
       <div className='places__location'>
-          {/* {
+          {
             allPlaces && Object.keys(allPlaces).map((key, idx) => (
               <div className='places__location-wrap' key={idx}>
                 <div className='places__location-name-wrap'>
@@ -40,7 +41,7 @@ export const PlacesBar = ({allPlaces, newPlaces, kinds, kindsFilter, setKindsFil
                 </div>
               </div>
             ))
-          } */}
+          }
       </div>
     </div>
   )

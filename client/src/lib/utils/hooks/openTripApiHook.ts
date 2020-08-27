@@ -2,7 +2,7 @@ import {gql} from '@apollo/client';
 import {apolloClient} from '../../services/apollo';
 import {IPlacesQuery} from '../types';
 
-export interface IFetchPlaces {
+interface IFetchPlaces {
   maxLat: number;
   minLat: number; 
   maxLng: number;

@@ -1,0 +1,25 @@
+.filter {
+  // width: 50%;
+  &__toggle{
+    &-button{
+      font-size: 1.4rem;
+    }
+  }
+  &__list-wrap{
+    position: fixed;
+    height: 100%;
+    background-color: $color-sidebar;
+  }
+
+  &__selected {
+    color: red;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    &-item {
+      flex-basis: 50%;
+    }
+  }
+}

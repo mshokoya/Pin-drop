@@ -15,6 +15,7 @@ interface Props {
 export const PlacesBar = ({allPlaces, newPlaces, kinds, kindsFilter, setKindsFilter}: Props) => {
   // const kindsList = useRef(Object.keys(kinds));
   const [kindsList, setKindsList] = useState<string[]>(Object.keys(kinds));
+  // console.log(allPlaces)
 
   useDeepEqual(() => {
     setKindsList(Object.keys(kinds))
@@ -30,14 +31,17 @@ export const PlacesBar = ({allPlaces, newPlaces, kinds, kindsFilter, setKindsFil
       <div className='places__interests'>
         <span>Interests</span>
       </div>
-      {/* <FilterBox kindsList={kindsList} kindsFilter={kindsFilter} applyFilter={applyKindsFilter}/> */}
+      <FilterBox kindsList={kindsList} kindsFilter={kindsFilter} applyFilter={applyKindsFilter}/>
 
       <div className='places__location'>
           {
-            allPlaces && Object.keys(allPlaces).map((key, idx) => (
+            _map(allPlaces, (hD, idx) => (
               <div className='places__location-wrap' key={idx}>
                 <div className='places__location-name-wrap'>
-                  <p className='places__location-name'>{allPlaces[key].properties.name}</p>
+                  <p className='places__location-name'>{hD.properties.name}</p>
+                </div>
+                <div className='places__location-image-wrap'>
+                  <img className='places__location-image' src={hD.properties.images?.thumb}/>
                 </div>
               </div>
             ))
@@ -46,3 +50,16 @@ export const PlacesBar = ({allPlaces, newPlaces, kinds, kindsFilter, setKindsFil
     </div>
   )
 }
+
+// {
+//   allPlaces && Object.keys(allPlaces).map((key, idx) => (
+//     <div className='places__location-wrap' key={idx}>
+//       <div className='places__location-name-wrap'>
+//         <p className='places__location-name'>{allPlaces[key].properties.name}</p>
+//       </div>
+//       <div className='places__location-image-wrap'>
+//         <p className='places__location-image'>{allPlaces[key].properties.name}</p>
+//       </div>
+//     </div>
+//   ))
+// }

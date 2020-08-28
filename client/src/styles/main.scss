@@ -1,3 +1,5 @@
+// abstracts
+@import "abstracts/variables";
 // base
 @import "base/base";
 @import "base/typography";
@@ -9,6 +11,7 @@
 @import "components/map";
 @import "components/sidebar";
 @import "components/places";
+@import "components/filter-box";
 
 // pages
 @import "pages/home";

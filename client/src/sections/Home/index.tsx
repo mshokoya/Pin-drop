@@ -1,11 +1,16 @@
-import React, {useState, useMemo} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import { Sidebar } from '../../components/Sidebar';
 import {Map} from '../../components/Map';
 import {fetchPlacesHook, useDeepEffect, fetchImagesHook} from '../../lib/utils/hooks';
 import {IPos} from './types';
-import {UPlacesHash, IKind} from '../../lib/utils/types';
+import {UPlacesHash, IKind, IUnsplash} from '../../lib/utils/types';
 import {hashPlacesObj} from '../../lib/utils/helpers/hashPlacesObj';
 
+interface Return {
+  data: IUnsplash
+  loading: boolean
+  error: Error
+}
 
 export const Home = () => {
   const [pos, setPos] = useState<IPos>()
@@ -13,10 +18,17 @@ export const Home = () => {
   const [newPlaces, setNewPlaces] = useState<UPlacesHash>({})
   const [allKinds, setAllKinds] = useState<IKind>({})
   const [kindsFilter, setKindsFilter] = useState<{[key: string]:boolean}>({})
-  const images = useMemo(() => fetchImagesHook(), []);
+  const images = useRef<IUnsplash>()
+
+  useEffect(() => {
+    (async () => {
+      const res = await fetchImagesHook();
+      // @ts-ignore
+      images.current = res.data.images
+    })()
+  }, [])
 
   useDeepEffect(async() => {
-    console.log(images)
     if (pos){
       try {
         const res = await fetchPlacesHook({
@@ -30,7 +42,8 @@ export const Home = () => {
           const {newPlaces, hash, kinds} = hashPlacesObj({
             places: res.data.places.features, 
             hash: allPlaces,
-            kinds: allKinds
+            kinds: allKinds,
+            images: images.current,
           });
           setAllPlaces(hash);
           setNewPlaces(newPlaces);

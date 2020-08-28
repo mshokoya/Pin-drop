@@ -9,7 +9,7 @@ const extUri = new RestLink({
   endpoints: {
     places:`${process.env.REACT_APP_OPENTRIPMAP_URL}/places/bbox?apikey=${process.env.REACT_APP_OPENTRIPMAP_API_KEY}`,
     geocoding: `${process.env.REACT_APP_MAPBOX_URL}/geocoding/${process.env.REACT_APP_MAPBOX_VERSION}`,
-    images: `${process.env.REACT_APP_UNSPLASH_PHOTOS_URL}?client_id=${process.env.REACT_APP_UNSPLASH_ACCESS_KEY}&`,
+    images: `${process.env.REACT_APP_UNSPLASH_PHOTOS_URL}?client_id=${process.env.REACT_APP_UNSPLASH_ACCESS_KEY}`,
   }
 });
 

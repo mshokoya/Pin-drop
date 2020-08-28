@@ -1,12 +1,16 @@
-import {IPlaces, UPlacesHash, IKind} from '../types';
+import {IPlaces, UPlacesHash, IKind, IUnsplash} from '../types';
 import _isEmpty from 'lodash.isempty';
+
+const NUM_OF_IMAGES = 10;
+
 interface Args {
   places: IPlaces[];
   hash: UPlacesHash;
   kinds: IKind;
+  images?: IUnsplash
 }
 
-export const hashPlacesObj = ({hash, places, kinds}: Args): 
+export const hashPlacesObj = ({hash, places, kinds, images}: Args): 
   {
     hash: UPlacesHash,
     kinds: IKind,
@@ -28,7 +32,13 @@ export const hashPlacesObj = ({hash, places, kinds}: Args):
       });
     
       if (!newHash[obj.id]) {
-        newHash[obj.id] = newPlaces[obj.id]  = obj;
+        if (images){
+          const rnum = Math.floor(Math.random() * NUM_OF_IMAGES)
+          const imageUrls = images.results[rnum].urls
+          obj.properties.images = imageUrls
+        }
+        
+        newHash[obj.id] = newPlaces[obj.id] = obj;
       }
   });
 

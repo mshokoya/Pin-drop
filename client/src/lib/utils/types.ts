@@ -10,6 +10,13 @@ export interface IPlacesHash {
     coordinates: [number, number] 
   }
   properties: {
+    images?: {
+      ra: string;
+      full: string;
+      regular: string;
+      small: string;
+      thumb: string;
+    },
     xid: string
     name: string
     rate: number

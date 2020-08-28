@@ -38,22 +38,56 @@ body {
   display: flex;
   flex-direction: column; }
   .sidebar__comp {
+    position: relative;
     overflow: scroll; }
 
 .places {
   display: flex;
   flex-direction: column; }
+  .places__location-wrap {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 15rem;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem rgba(104, 97, 97, 0.2); }
+  .places__location-image-wrap {
+    width: 30%;
+    height: 100%; }
+  .places__location-name-wrap {
+    flex-basis: 70%;
+    display: flex;
+    align-items: center;
+    margin-right: 1.2rem; }
   .places__location {
     width: 97%;
     margin: 0 auto; }
-    .places__location-wrap {
-      background-color: white;
-      display: flex;
-      align-items: center;
-      height: 4rem;
-      margin-bottom: 2rem; }
+    .places__location-image {
+      height: 100%;
+      width: 100%; }
+    .places__location-name {
+      font-size: 2rem; }
+
+.filter__toggle-button {
+  font-size: 1.4rem; }
+
+.filter__list-wrap {
+  position: fixed;
+  height: 100%;
+  background-color: #fbf7f1; }
+
+.filter__selected {
+  color: red; }
+
+.filter__list {
+  display: flex;
+  flex-wrap: wrap; }
+  .filter__list-item {
+    flex-basis: 50%; }
 
 .home {
   display: grid;
   height: 100vh;
-  grid-template-columns: 30% 70%; }
+  grid-template-columns: 32% 68%; }

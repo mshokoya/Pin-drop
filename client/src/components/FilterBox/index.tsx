@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import _isEmpty from 'lodash.isempty';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faFilter } from '@fortawesome/free-solid-svg-icons';
 
 interface Args {
   kindsList: string[];
@@ -8,14 +10,10 @@ interface Args {
 }
 
 export const FilterBox = ({kindsList, kindsFilter, applyFilter}: Args) => {
-  const [filter, setFilter] = useState<{[key: string]: boolean}>(kindsFilter)
-
+  const [filter, setFilter] = useState<{[key: string]: boolean}>(kindsFilter);
+  const [toggle, setToggle] = useState<boolean>(false);
   
   const handleClick = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
-    // e.target.textContent
-    // @ts-ignore
-    // console.log(e.target.textContent)
-    
     // @ts-ignore
     if (filter[e.target.textContent]) {
       const filterCopy = {...filter}
@@ -24,7 +22,7 @@ export const FilterBox = ({kindsList, kindsFilter, applyFilter}: Args) => {
       setFilter(filterCopy);
     } else {
       setFilter({
-        ...filter, 
+        ...filter,
         // @ts-ignore
         [e.target.textContent]: true
       })
@@ -37,27 +35,31 @@ export const FilterBox = ({kindsList, kindsFilter, applyFilter}: Args) => {
 
   return (
     <div className='filter'>
-      <div className='filter__toggle'>
-        toggle filter
+      <div className='filter__toggle' onClick={() => setToggle(!toggle)}>
+        <FontAwesomeIcon icon={faFilter} className='filter__toggle-button'/>
       </div>
-      <div className='filter__list'>
-        {kindsList.map((k, idx) => (
-          <span 
-            key={idx} 
-            onClick={handleClick} 
-            className={`filter__lst-item ${filter[k] && 'filter__selected'}`} >
-            {k}
-          </span>
-        ))}
-      </div>
-      <button disabled={
-        _isEmpty(filter) 
-        && _isEmpty(kindsFilter)
-        } 
-        onClick={handleSubmit}
-      >
+      {toggle && (
+        <div className='filter__list-wrap'>
+          <div className='filter__list'>
+            {kindsList.map((k, idx) => (
+              <div 
+                key={idx} 
+                onClick={handleClick} 
+                className={`filter__list-item ${filter[k] && 'filter__selected'}`} >
+                {k}
+              </div>
+            ))}
+          </div>
+          <button disabled={
+            _isEmpty(filter) 
+            && _isEmpty(kindsFilter)
+            } 
+            onClick={handleSubmit}
+          >
           Apply
-      </button>
+          </button>
+        </div>
+      )}
     </div>
-  )
+  );
 }

@@ -2,14 +2,16 @@ import React, {useState} from 'react';
 import _isEmpty from 'lodash.isempty';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faFilter } from '@fortawesome/free-solid-svg-icons';
+import {UPlacesHash} from '../../lib/utils/types';
 
 interface Args {
   kindsList: string[];
   kindsFilter: {[key: string]:boolean};
   applyFilter: (filter: {[key: string]:boolean}) => void
+  allPlaces: UPlacesHash
 }
 
-export const FilterBox = ({kindsList, kindsFilter, applyFilter}: Args) => {
+export const FilterBox = ({kindsList, kindsFilter, applyFilter, allPlaces}: Args) => {
   const [filter, setFilter] = useState<{[key: string]: boolean}>(kindsFilter);
   const [toggle, setToggle] = useState<boolean>(false);
   
@@ -35,8 +37,13 @@ export const FilterBox = ({kindsList, kindsFilter, applyFilter}: Args) => {
 
   return (
     <div className='filter'>
-      <div className='filter__toggle' onClick={() => setToggle(!toggle)}>
-        <FontAwesomeIcon icon={faFilter} className='filter__toggle-button'/>
+      <div className='filter__toggle' >
+        <span>{allPlaces.length} places</span>
+        <FontAwesomeIcon 
+          icon={faFilter} 
+          className='filter__toggle-button'
+          onClick={() => setToggle(!toggle)}
+        />
       </div>
       {toggle && (
         <div className='filter__list-wrap'>

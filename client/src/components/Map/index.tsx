@@ -1,7 +1,7 @@
-import React, {useEffect, useRef, useState, memo} from 'react';
+import React, {useEffect, useRef, useState, memo, MutableRefObject} from 'react';
 import useDeepEffect from '../../lib/utils/hooks/useDeepEffect';
 import {IPos} from './types';
-import {IKind, UPlacesHash} from '../../lib/utils/types';
+import {IKind, UPlacesHash, PLACES_HASH_START} from '../../lib/utils/types';
 import mapboxgl from 'mapbox-gl';
 import _isEmpty from 'lodash.isempty';
 import _map from 'lodash.map';
@@ -35,31 +35,24 @@ export const Map = ({pos, setPos, newPlaces, allPlaces, kindsFilter, allKinds, s
   }, []);
 
   useDeepEffect(() => {
+    !_isEmpty(filterMarkersRef.current) && removeMarkers(filterMarkersRef);
     if (!_isEmpty(map) && _isEmpty(kindsFilter)) {
-      console.log('eya')
       _isEmpty(markersRef.current) 
-        ? createMarkers(markersRef.current, allPlaces)
-        : createMarkers(markersRef.current, newPlaces)
-    }
-  }, [newPlaces]);
-
-  useDeepEffect(() => {
-    if (!_isEmpty(kindsFilter)){
-      console.log('eyas')
-      removeMarkers(filterMarkersRef.current)
-
-      kindPlaceFilter((value) => {
+        ? createMarkers(markersRef, allPlaces)
+        : createMarkers(markersRef, newPlaces)
+    } else if (!_isEmpty(kindsFilter)){
+      kindPlaceFilter((id) => {
         filterMarkersRef.current.push(
           new mapboxgl.Marker()
-            .setLngLat(allPlaces[value].geometry.coordinates)
+            .setLngLat(allPlaces.hash[id].geometry.coordinates)
             .addTo(map!)
         )
       })
-      removeMarkers(markersRef.current)
-    } else {
-      createMarkers(markersRef.current, allPlaces)
+      removeMarkers(markersRef)
     }
-  }, [kindsFilter])
+    
+  }, [newPlaces, kindsFilter]);
+
 
   useDeepEffect(() => {
     // not working... fix it!!!
@@ -113,8 +106,8 @@ export const Map = ({pos, setPos, newPlaces, allPlaces, kindsFilter, allKinds, s
   }
   
   const mapInit = (longitude?: number, latitude?: number) => {
-    if (map) removeMarkers(markersRef.current);
-    if (!_isEmpty(allPlaces)) setAllPlaces({});
+    if (map) removeMarkers(markersRef);
+    if (!_isEmpty(allPlaces.hash)) setAllPlaces(PLACES_HASH_START);
 
     const newMap = new mapboxgl.Map({
       container: mapContainer.current as HTMLElement,
@@ -155,18 +148,19 @@ export const Map = ({pos, setPos, newPlaces, allPlaces, kindsFilter, allKinds, s
     setMap(newMap);
   }
 
-  const removeMarkers = (mL:mapboxgl.Marker[]) => {
-    mL.forEach((m) => {
+  const removeMarkers = (mL:MutableRefObject<mapboxgl.Marker[]>) => {
+    mL.current.forEach((m) => {
       m.remove()
     })
-    mL = [];
+    mL.current = [];
   };
 
-  const createMarkers = (mL:mapboxgl.Marker[], hash: UPlacesHash) => {
-    _map(hash, (_hV, hK) => {
-      mL.push(
+  const createMarkers = (mL:MutableRefObject<mapboxgl.Marker[]>, hash: UPlacesHash) => {
+    
+    _map(hash.hash, (_hV, hK) => {
+      mL.current.push(
         new mapboxgl.Marker()
-        .setLngLat(hash[hK].geometry.coordinates)
+        .setLngLat(hash.hash[hK].geometry.coordinates)
         .addTo(map!)
       )
     })

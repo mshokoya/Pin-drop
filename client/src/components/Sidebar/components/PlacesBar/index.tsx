@@ -5,7 +5,7 @@ import {FilterBox} from '../../../FilterBox';
 import _map from 'lodash.map';
 
 interface Props {
-  allPlaces?: UPlacesHash;
+  allPlaces: UPlacesHash;
   newPlaces?: UPlacesHash;
   kinds: IKind;
   kindsFilter: {[key: string]:boolean};
@@ -31,11 +31,16 @@ export const PlacesBar = ({allPlaces, newPlaces, kinds, kindsFilter, setKindsFil
       <div className='places__interests'>
         <span>Interests</span>
       </div>
-      <FilterBox kindsList={kindsList} kindsFilter={kindsFilter} applyFilter={applyKindsFilter}/>
+      <FilterBox 
+        kindsList={kindsList} 
+        kindsFilter={kindsFilter} 
+        applyFilter={applyKindsFilter}
+        allPlaces={allPlaces}
+      />
 
       <div className='places__location'>
           {
-            _map(allPlaces, (hD, idx) => (
+            _map(allPlaces.hash, (hD, idx) => (
               <div className='places__location-wrap' key={idx}>
                 <div className='places__location-name-wrap'>
                   <p className='places__location-name'>{hD.properties.name}</p>

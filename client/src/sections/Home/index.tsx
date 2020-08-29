@@ -3,7 +3,7 @@ import { Sidebar } from '../../components/Sidebar';
 import {Map} from '../../components/Map';
 import {fetchPlacesHook, useDeepEffect, fetchImagesHook} from '../../lib/utils/hooks';
 import {IPos} from './types';
-import {UPlacesHash, IKind, IUnsplash} from '../../lib/utils/types';
+import {UPlacesHash, IKind, IUnsplash, PLACES_HASH_START} from '../../lib/utils/types';
 import {hashPlacesObj} from '../../lib/utils/helpers/hashPlacesObj';
 
 interface Return {
@@ -12,10 +12,12 @@ interface Return {
   error: Error
 }
 
+
+
 export const Home = () => {
   const [pos, setPos] = useState<IPos>()
-  const [allPlaces, setAllPlaces] = useState<UPlacesHash>({})
-  const [newPlaces, setNewPlaces] = useState<UPlacesHash>({})
+  const [allPlaces, setAllPlaces] = useState<UPlacesHash>(PLACES_HASH_START)
+  const [newPlaces, setNewPlaces] = useState<UPlacesHash>(PLACES_HASH_START)
   const [allKinds, setAllKinds] = useState<IKind>({})
   const [kindsFilter, setKindsFilter] = useState<{[key: string]:boolean}>({})
   const images = useRef<IUnsplash>()

@@ -4,7 +4,7 @@ import {PlacesBar} from './components';
 import {UPlacesHash, IKind} from '../../lib/utils/types';
 
 interface Props {
-  allPlaces?: UPlacesHash;
+  allPlaces: UPlacesHash;
   newPlaces?: UPlacesHash;
   kinds: IKind;
   kindsFilter: {[key: string]:boolean};

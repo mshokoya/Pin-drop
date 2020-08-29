@@ -1,6 +1,9 @@
 .filter {
   // width: 50%;
   &__toggle{
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 1rem;
     &-button{
       font-size: 1.4rem;
     }

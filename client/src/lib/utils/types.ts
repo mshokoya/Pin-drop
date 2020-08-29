@@ -1,4 +1,9 @@
-export type UPlacesHash = {[key: string]: IPlacesHash}
+export const PLACES_HASH_START = {hash: {}, length: 0}
+
+export type UPlacesHash = {
+  hash: {[key: string]: IPlacesHash}
+  length: number
+}
 
 export type IKind = {[key: string]: {[key: string]: boolean}}
 
@@ -17,12 +22,21 @@ export interface IPlacesHash {
       small: string;
       thumb: string;
     },
-    xid: string
-    name: string
-    rate: number
-    osm: string
-    wikidata: string
-    kinds: string[]
+    website: string;
+    phone: string;
+    xid: string;
+    name: string;
+    rate: number;
+    osm: string;
+    wikidata: string;
+    kinds: any | string[];
+    description: string;
+    address: {
+      streetAddress: string;
+      county: string;
+      country: string;
+      city: string;
+    }
   }
 }
 

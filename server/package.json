@@ -4,12 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "dotenv -e ./env/.env-prod ts-node ./src/index.ts",
-    "dev": "dotenv -e ./env/.env-dev ts-node ./src/index.ts",
-    "start:watch": "dotenv -e ./env/.env-prod nodemon src/index.ts",
-    "dev:watch": "dotenv -e ./env/.env-dev nodemon ./src/index.ts",
+    "start": "dotenv -e ./env/.env ts-node ./src/index.ts",
+    "start:watch": "dotenv -e ./env/.env nodemon src/index.ts",
+    "dev:watch": "dotenv -e ./env/.env nodemon ./src/index.ts",
     "build": "tsc -p ./",
-    "test": "dotenv -e ./env/.env-dev jest",
+    "test": "dotenv -e ./env/.env jest",
     "test:watch": "jest --watchAll --no-cache",
     "lint": "eslint ./src --ext .ts",
     "lint:fix": "eslint ./src --ext .ts --fix"

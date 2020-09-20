@@ -5,7 +5,12 @@ export type UPlacesHash = {
   length: number
 }
 
-export type IKind = {[key: string]: {[key: string]: boolean}}
+export type IKind = {
+  [key: string]: {
+    length: number,
+    hash: {[key: string]: boolean}
+  }
+}
 
 export interface IPlacesHash {
   type: string

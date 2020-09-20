@@ -30,11 +30,15 @@ export const hashPlacesObj = ({hash, places, kinds, images}: Args):
     obj.properties.kinds
       .split(',')
       .forEach((k: any) => {
-        return newKinds[k] 
-          ? !_isEmpty(newKinds[k])
-              ? newKinds[k][obj.id] = true
-              : {[obj.id]: true}
-          : newKinds[k] = {[obj.id]: true}
+        if (newKinds[k]){
+          newKinds[k].length++
+          newKinds[k]['hash'][obj.id] = true
+        } else {
+          newKinds[k] = {
+            length: 1,
+            hash: {[obj.id]: true}
+          }
+        }
       });
     
       if (!oldHash.hash[obj.id]) {

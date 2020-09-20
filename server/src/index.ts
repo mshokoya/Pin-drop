@@ -23,7 +23,7 @@ const mount = async (app: Application) => {
   }, () => {
     console.log('[mongo] connected to mongoDb');
 
-    const qraphQlServer = new ApolloServer({typeDefs, resolvers, context: ({req, res}) => ({req, res})})
+    const qraphQlServer = new ApolloServer({playground: true,typeDefs, resolvers, context: ({req, res}) => ({req, res})})
     qraphQlServer.applyMiddleware({app, path: '/api'});
     console.log('[apollo] apollo successfully initialized');
   

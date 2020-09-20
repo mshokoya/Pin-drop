@@ -23,25 +23,33 @@ const DEFAULT_LOCATION = {
 const DEFAULT_ZOOM = 15;
 const DEFAULT_STREET_VIEW = "mapbox://styles/mapbox/streets-v11";
 
+// TODO turn markers into hashmap with id as key, this is for optimised mapping
 export const Map = ({pos, setPos, newPlaces, allPlaces, kindsFilter, allKinds, setAllPlaces}: Props) => {
-  // turn markers into hashmap with id as key, this is for optimised mapping
   const markersRef = useRef<mapboxgl.Marker[]>([])
   const filterMarkersRef = useRef<mapboxgl.Marker[]>([])
   const [map, setMap] = useState<mapboxgl.Map>();
   const mapContainer = useRef<HTMLElement|null>(null);
 
   useEffect(() => {
+    // renders maps, gets location and adds markers to map
     pageSetup(mapInit);
   }, []);
 
   useDeepEffect(() => {
+    // if filter is empty then we remove all markers on map
     !_isEmpty(filterMarkersRef.current) && removeMarkers(filterMarkersRef);
+
+    // if the map has been rendered and there are no filters add markers to map
+    // else if there are filters, remove all markers and only render filter markers on map
     if (!_isEmpty(map) && _isEmpty(kindsFilter)) {
+      //  if no markers on map then then render all markers
+      //  if markers are on map then only render markers for new places
       _isEmpty(markersRef.current) 
         ? createMarkers(markersRef, allPlaces)
         : createMarkers(markersRef, newPlaces)
     } else if (!_isEmpty(kindsFilter)){
       kindPlaceFilter((id) => {
+        // renders markers on map
         filterMarkersRef.current.push(
           new mapboxgl.Marker()
             .setLngLat(allPlaces.hash[id].geometry.coordinates)
@@ -50,12 +58,14 @@ export const Map = ({pos, setPos, newPlaces, allPlaces, kindsFilter, allKinds, s
       })
       removeMarkers(markersRef)
     }
-    
   }, [newPlaces, kindsFilter]);
 
-
+  /* 
+    TODO not working... fix it!!!
+    this is suppose to prevent pointless api calls when zoom into map 
+    as no new places will be found.
+  */
   useDeepEffect(() => {
-    // not working... fix it!!!
     if (pos){
       map!.on('zoomend', () => {
         // @ts-ignore
@@ -81,8 +91,14 @@ export const Map = ({pos, setPos, newPlaces, allPlaces, kindsFilter, allKinds, s
     }
   }, [pos])
 
+  /* 
+    attempts to access the geolocation browser api.
+    when user is promted to grant access to location. initially map will 
+    render with default location. once granted access map will re-render
+    with users location
+  */
   const pageSetup = (callback: any) => {
-    if (navigator.geolocation && navigator.permissions){  
+    if (navigator.geolocation && navigator.permissions){ 
       navigator.permissions.query({name:'geolocation'}).then((result) => {
         if (result.state === 'prompt'){
           callback()
@@ -98,6 +114,7 @@ export const Map = ({pos, setPos, newPlaces, allPlaces, kindsFilter, allKinds, s
     }
   }
   
+  // retrives user location once granted access
   const getLocation = (callback: any): void => {
     navigator.geolocation.getCurrentPosition((vals) => {
       const {latitude, longitude} = vals.coords;
@@ -105,9 +122,10 @@ export const Map = ({pos, setPos, newPlaces, allPlaces, kindsFilter, allKinds, s
     });
   }
   
+  // renders maps and all its settings
   const mapInit = (longitude?: number, latitude?: number) => {
-    if (map) removeMarkers(markersRef);
-    if (!_isEmpty(allPlaces.hash)) setAllPlaces(PLACES_HASH_START);
+    if (map) {removeMarkers(markersRef)}
+    if (!_isEmpty(allPlaces.hash)) setAllPlaces({hash: {}, length: 0});
 
     const newMap = new mapboxgl.Map({
       container: mapContainer.current as HTMLElement,
@@ -118,7 +136,7 @@ export const Map = ({pos, setPos, newPlaces, allPlaces, kindsFilter, allKinds, s
       },
       style: DEFAULT_STREET_VIEW
     });
-
+    
     newMap.on('load', async () => {
       // @ts-ignore
       const {_ne, _sw} = newMap.getBounds();
@@ -170,7 +188,7 @@ export const Map = ({pos, setPos, newPlaces, allPlaces, kindsFilter, allKinds, s
     callback: (value: string) => void
   ) => {
     _map(kindsFilter, (_oV, oK)=> {
-      _map(allKinds[oK], (_iV, iK) => {
+      _map(allKinds[oK].hash, (_iV, iK) => {
         callback(iK)
       });
     });

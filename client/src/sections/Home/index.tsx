@@ -23,11 +23,12 @@ export const Home = () => {
   const images = useRef<IUnsplash>()
 
   useEffect(() => {
+
     (async () => {
       const res = await fetchImagesHook();
       // @ts-ignore
       images.current = res.data.images
-    })()
+    })();
   }, [])
 
   useDeepEffect(async() => {
@@ -49,7 +50,8 @@ export const Home = () => {
           });
           setAllPlaces(hash);
           setNewPlaces(newPlaces);
-          setAllKinds({...kinds});
+          // setAllKinds({...kinds});
+          setAllKinds(kinds);
         }
       } catch (error) {
         console.log(error.message)

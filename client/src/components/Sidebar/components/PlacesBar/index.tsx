@@ -1,8 +1,9 @@
 import React, {useRef, useState} from 'react';
-import {UPlacesHash, IKind} from '../../../../lib/utils/types';
+import {UPlacesHash, IKind, IPlacesHash} from '../../../../lib/utils/types';
 import useDeepEqual from '../../../../lib/utils/hooks/useDeepEffect';
 import {FilterBox} from '../../../FilterBox';
 import _map from 'lodash.map';
+import _isEmpty from 'lodash.isempty';
 
 interface Props {
   allPlaces: UPlacesHash;
@@ -13,18 +14,26 @@ interface Props {
 }
 
 export const PlacesBar = ({allPlaces, newPlaces, kinds, kindsFilter, setKindsFilter}: Props) => {
-  // const kindsList = useRef(Object.keys(kinds));
   const [kindsList, setKindsList] = useState<string[]>(Object.keys(kinds));
-  // console.log(allPlaces)
 
   useDeepEqual(() => {
     setKindsList(Object.keys(kinds))
-    // console.log(kindsList.length)
   }, [kinds]);
 
   const applyKindsFilter = (filter: {[key: string]:boolean}) => {
     setKindsFilter(filter)
   }
+
+  const placeComponent = ({hD}: {hD: IPlacesHash}) => (
+    <div className='places__location-wrap' key={hD.id}>
+      <div className='places__location-name-wrap'>
+        <p className='places__location-name'>{hD.properties.name}</p>
+      </div>
+      <div className='places__location-image-wrap'>
+        <img className='places__location-image' src={hD.properties.images?.thumb}/>
+      </div>
+    </div>
+  )
 
   return (
     <div className='places'>
@@ -40,31 +49,21 @@ export const PlacesBar = ({allPlaces, newPlaces, kinds, kindsFilter, setKindsFil
 
       <div className='places__location'>
           {
-            _map(allPlaces.hash, (hD, idx) => (
-              <div className='places__location-wrap' key={idx}>
-                <div className='places__location-name-wrap'>
-                  <p className='places__location-name'>{hD.properties.name}</p>
-                </div>
-                <div className='places__location-image-wrap'>
-                  <img className='places__location-image' src={hD.properties.images?.thumb}/>
-                </div>
-              </div>
-            ))
+            _isEmpty(kindsFilter)
+              ? _map(allPlaces.hash, (oV, _oK) => (
+                  placeComponent({
+                    hD: oV,
+                  })
+                ))
+              : _map(kindsFilter, (_oV, oK) => (
+                 _map(kinds[oK].hash, (_iV, iK) => (
+                    placeComponent({
+                      hD: allPlaces.hash[iK], 
+                    })
+                 ))
+              ))
           }
       </div>
     </div>
   )
 }
-
-// {
-//   allPlaces && Object.keys(allPlaces).map((key, idx) => (
-//     <div className='places__location-wrap' key={idx}>
-//       <div className='places__location-name-wrap'>
-//         <p className='places__location-name'>{allPlaces[key].properties.name}</p>
-//       </div>
-//       <div className='places__location-image-wrap'>
-//         <p className='places__location-image'>{allPlaces[key].properties.name}</p>
-//       </div>
-//     </div>
-//   ))
-// }

@@ -11,7 +11,7 @@ interface Props {
   setKindsFilter: React.Dispatch<React.SetStateAction<{[key: string]:boolean}>>
 }
 
-export const Sidebar = React.memo(({allPlaces, newPlaces, kinds, kindsFilter, setKindsFilter}: Props) => {
+export const Sidebar = ({allPlaces, newPlaces, kinds, kindsFilter, setKindsFilter}: Props) => {
   return (
     <div className="sidebar">
       <Header />
@@ -31,4 +31,4 @@ export const Sidebar = React.memo(({allPlaces, newPlaces, kinds, kindsFilter, se
       </div>
     </div>
   )
-});
+};

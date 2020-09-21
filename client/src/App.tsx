@@ -13,8 +13,8 @@ export const App = () => {
   useQuery<LoginUserQueryQuery, QueryLoginArgs>(loginUserQuery, {
     variables: {
       input: {
-        email: 'test123@test.com',
-        password: 'test123',
+        email: 'test12@test.com',
+        password: 'test12',
       },
     },
     onCompleted: (data) => {

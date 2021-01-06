@@ -10,7 +10,7 @@
     "@types/lodash.map": "^4.6.13",
     "apollo-link-http": "^1.5.17",
     "apollo-link-rest": "^0.8.0-beta.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "faker": "^5.1.0",
     "graphql": "^15.3.0",
     "graphql-anywhere": "^4.2.7",

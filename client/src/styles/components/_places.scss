@@ -1,6 +1,11 @@
-.places{
+.places {
   display: flex;
   flex-direction: column;
+
+  &__location {
+    width: 97%;
+    margin: 0 auto;
+  }
 
   &__location-wrap{
     background-color: white;
@@ -13,30 +18,23 @@
     box-shadow: .2rem .2rem .5rem rgba($color-box-shadow, 0.2);
   }
 
-  &__location-image-wrap {
-    width: 30%;
-    height: 100%;
+  &__location-name {
+    &-wrap {
+      flex-basis: 70%;
+      display: flex;
+      align-items: center;
+      margin-right: 1.2rem;
+    }
+    font-size: 2rem;
   }
 
-  &__location-name-wrap {
-    flex-basis: 70%;
-    display: flex;
-    align-items: center;
-    margin-right: 1.2rem;
-  }
-
-  &__location{
-    width: 97%;
-    margin: 0 auto;
-
-    &-image {
+  &__location-image {
+    &-wrap {
+      width: 30%;
       height: 100%;
-      width: 100%;
     }
-
-    &-name {
-      font-size: 2rem;
-
-    }
+    
+    height: 100%;
+    width: 100%;
   }
 }

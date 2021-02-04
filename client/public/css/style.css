@@ -3,7 +3,10 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
 
 html {
   font-size: 62.5%; }
@@ -15,19 +18,22 @@ body {
   font-family: Arial, Helvetica, sans-serif; }
 
 .header {
-  height: 7rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  min-height: 7rem;
   border-bottom: .1rem solid lightgrey;
-  padding: 0 1rem; }
+  position: relative; }
+  .header__search-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .header__logo-wrapper {
+    height: 5rem;
+    margin: 0 auto; }
   .header__logo {
     height: 100%; }
-    .header__logo-wrapper {
-      height: 70%; }
-  .header__menu {
-    display: flex; }
-    .header__menu-item:not(:last-child) {
+  .header__menu > div {
+    display: inline; }
+    .header__menu > div:not(:last-child) {
       margin-right: 2rem; }
 
 .sidebar {
@@ -38,12 +44,18 @@ body {
   display: flex;
   flex-direction: column; }
   .sidebar__comp {
-    position: relative;
-    overflow: scroll; }
+    overflow: scroll;
+    height: 100%; }
+
+.hide {
+  display: none !important; }
 
 .places {
   display: flex;
   flex-direction: column; }
+  .places__location {
+    width: 97%;
+    margin: 0 auto; }
   .places__location-wrap {
     background-color: white;
     display: flex;
@@ -53,43 +65,46 @@ body {
     margin-bottom: 2rem;
     padding: 1rem;
     box-shadow: 0.2rem 0.2rem 0.5rem rgba(104, 97, 97, 0.2); }
-  .places__location-image-wrap {
-    width: 30%;
-    height: 100%; }
-  .places__location-name-wrap {
-    flex-basis: 70%;
-    display: flex;
-    align-items: center;
-    margin-right: 1.2rem; }
-  .places__location {
-    width: 97%;
-    margin: 0 auto; }
-    .places__location-image {
-      height: 100%;
-      width: 100%; }
-    .places__location-name {
-      font-size: 2rem; }
+  .places__location-name {
+    font-size: 2rem; }
+    .places__location-name-wrap {
+      flex-basis: 70%;
+      display: flex;
+      align-items: center;
+      margin-right: 1.2rem; }
+  .places__location-image {
+    height: 100%;
+    width: 100%; }
+    .places__location-image-wrap {
+      width: 30%;
+      height: 100%; }
 
 .filter__toggle {
-  display: flex;
+  display: -webkit-flex;
   justify-content: space-between;
   margin: 1.5rem 1rem; }
   .filter__toggle-button {
     font-size: 1.4rem; }
 
 .filter__list-wrap {
-  position: fixed;
-  height: 100%;
-  background-color: #fbf7f1; }
+  background-color: #fbf7f1;
+  padding: 1rem;
+  font-size: 1.5rem; }
+  .filter__list-wrap button {
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 25%;
+    border: .1rem solid white; }
 
 .filter__selected {
   color: red; }
 
 .filter__list {
   display: flex;
-  flex-wrap: wrap; }
+  flex-direction: column; }
   .filter__list-item {
-    flex-basis: 50%; }
+    flex-basis: 50%;
+    margin-bottom: 2rem; }
 
 .home {
   display: grid;

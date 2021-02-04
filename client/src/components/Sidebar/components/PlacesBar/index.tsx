@@ -13,16 +13,8 @@ interface Props {
   setKindsFilter: React.Dispatch<React.SetStateAction<{[key: string]:boolean}>>
 }
 
-export const PlacesBar = ({allPlaces, newPlaces, kinds, kindsFilter, setKindsFilter}: Props) => {
-  const [kindsList, setKindsList] = useState<string[]>(Object.keys(kinds));
+export const PlacesBar = ({allPlaces, kinds, kindsFilter, setKindsFilter}: Props) => {
 
-  useDeepEqual(() => {
-    setKindsList(Object.keys(kinds))
-  }, [kinds]);
-
-  const applyKindsFilter = (filter: {[key: string]:boolean}) => {
-    setKindsFilter(filter)
-  }
 
   const placeComponent = ({hD}: {hD: IPlacesHash}) => (
     <div className='places__location-wrap' key={hD.id}>
@@ -37,16 +29,6 @@ export const PlacesBar = ({allPlaces, newPlaces, kinds, kindsFilter, setKindsFil
 
   return (
     <div className='places'>
-      <div className='places__interests'>
-        <span>Interests</span>
-      </div>
-      <FilterBox 
-        kindsList={kindsList} 
-        kindsFilter={kindsFilter} 
-        applyFilter={applyKindsFilter}
-        allPlaces={allPlaces}
-      />
-
       <div className='places__location'>
           {
             _isEmpty(kindsFilter)

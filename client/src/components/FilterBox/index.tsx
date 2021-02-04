@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
 import _isEmpty from 'lodash.isempty';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faFilter } from '@fortawesome/free-solid-svg-icons';
 import {UPlacesHash} from '../../lib/utils/types';
 
 interface Args {
@@ -9,24 +7,24 @@ interface Args {
   kindsFilter: {[key: string]:boolean};
   applyFilter: (filter: {[key: string]:boolean}) => void
   allPlaces: UPlacesHash
+  toggle: boolean
 }
 
-export const FilterBox = ({kindsList, kindsFilter, applyFilter, allPlaces}: Args) => {
+export const FilterBox = ({kindsList, kindsFilter, applyFilter, toggle}: Args) => {
   const [filter, setFilter] = useState<{[key: string]: boolean}>(kindsFilter);
-  const [toggle, setToggle] = useState<boolean>(false);
   
-  const handleClick = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
+  const handleClick = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>, kind: string) => {
     // @ts-ignore
-    if (filter[e.target.textContent]) {
+    if (filter[kind]) {
       const filterCopy = {...filter}
       // @ts-ignore
-      delete filterCopy[e.target.textContent] // worse performance
+      delete filterCopy[kind] // worse performance
       setFilter(filterCopy);
     } else {
       setFilter({
         ...filter,
         // @ts-ignore
-        [e.target.textContent]: true
+        [kind]: true
       })
     }
   }
@@ -37,27 +35,20 @@ export const FilterBox = ({kindsList, kindsFilter, applyFilter, allPlaces}: Args
 
   return (
     <div className='filter'>
-      <div className='filter__toggle' >
-        <span>{allPlaces.length} places</span>
-        <FontAwesomeIcon 
-          icon={faFilter} 
-          className='filter__toggle-button'
-          onClick={() => setToggle(!toggle)}
-        />
-      </div>
       {toggle && (
         <div className='filter__list-wrap'>
           <div className='filter__list'>
             {kindsList.map((k, idx) => (
               <div 
                 key={idx} 
-                onClick={handleClick} 
-                className={`filter__list-item ${filter[k] && 'filter__selected'}`} >
-                {k}
+                onClick={(e) => handleClick(e, k)}
+                className={`filter__list-item${filter[k] ? ' filter__selected': ''}`} >
+                
+                {k.replaceAll('_', ' ')}
               </div>
             ))}
           </div>
-          <button disabled={
+          <button type='button' disabled={
             _isEmpty(filter) 
             && _isEmpty(kindsFilter)
             } 

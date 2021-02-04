@@ -3,6 +3,9 @@ import useDeepEffect from '../../lib/utils/hooks/useDeepEffect';
 import {IPos} from './types';
 import {IKind, UPlacesHash, PLACES_HASH_START} from '../../lib/utils/types';
 import mapboxgl from 'mapbox-gl';
+// @ts-ignore
+import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
+import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import _isEmpty from 'lodash.isempty';
 import _map from 'lodash.map';
 
@@ -36,13 +39,13 @@ export const Map = ({pos, setPos, newPlaces, allPlaces, kindsFilter, allKinds, s
   }, []);
 
   useDeepEffect(() => {
-    // if filter is empty then we remove all markers on map
+    // if kinds filter is empty then we remove all kinds filter markers on map
     !_isEmpty(filterMarkersRef.current) && removeMarkers(filterMarkersRef);
 
-    // if the map has been rendered and there are no filters add markers to map
+    // if the map has been rendered and there are no filters add all markers to map
     // else if there are filters, remove all markers and only render filter markers on map
     if (!_isEmpty(map) && _isEmpty(kindsFilter)) {
-      //  if no markers on map then then render all markers
+      //  if no markers on map then render all markers
       //  if markers are on map then only render markers for new places
       _isEmpty(markersRef.current) 
         ? createMarkers(markersRef, allPlaces)
@@ -136,6 +139,23 @@ export const Map = ({pos, setPos, newPlaces, allPlaces, kindsFilter, allKinds, s
       },
       style: DEFAULT_STREET_VIEW
     });
+
+    const geocoder = new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken,
+    mapboxgl: mapboxgl,
+    })
+
+    geocoder.on('result', () => {
+      setAllPlaces({
+        hash: {},
+        length: 0
+      })
+      removeMarkers(markersRef)
+    })
+  
+
+    document.querySelector('.header__search')!.appendChild(geocoder.onAdd(newMap))
+
     
     newMap.on('load', async () => {
       // @ts-ignore

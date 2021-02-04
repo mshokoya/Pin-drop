@@ -1,17 +1,24 @@
 .filter {
-  // width: 50%;
-  &__toggle{
-    display: flex;
+  &__toggle {
+    display: -webkit-flex;
     justify-content: space-between;
     margin: 1.5rem 1rem;
     &-button{
       font-size: 1.4rem;
     }
   }
-  &__list-wrap{
-    position: fixed;
-    height: 100%;
+
+  &__list-wrap {
     background-color: $color-sidebar;
+    padding: 1rem;
+    font-size: 1.5rem;
+
+    & button {
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 25%;
+      border: .1rem solid white
+    }
   }
 
   &__selected {
@@ -20,9 +27,11 @@
 
   &__list {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    
     &-item {
       flex-basis: 50%;
+      margin-bottom: 2rem;
     }
   }
 }

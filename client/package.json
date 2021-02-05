@@ -28,9 +28,9 @@
     "unsplash-js": "^6.0.0"
   },
   "scripts": {
-    "start:app": "react-scripts start",
+    "start": "react-scripts start",
     "start:css": "node-sass src/styles/main.scss public/css/style.css -w",
-    "start": "concurrently \"npm:start:app\" \"npm:start:css\"",
+    "dev": "concurrently \"npm:start\" \"npm:start:css\"",
     "gql:codegen": "graphql-codegen",
     "build": "react-scripts build",
     "test:watch": "react-scripts test",

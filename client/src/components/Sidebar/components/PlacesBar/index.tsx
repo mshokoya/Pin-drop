@@ -1,7 +1,5 @@
-import React, {useRef, useState} from 'react';
+import React from 'react';
 import {UPlacesHash, IKind, IPlacesHash} from '../../../../lib/utils/types';
-import useDeepEqual from '../../../../lib/utils/hooks/useDeepEffect';
-import {FilterBox} from '../../../FilterBox';
 import _map from 'lodash.map';
 import _isEmpty from 'lodash.isempty';
 
@@ -13,7 +11,7 @@ interface Props {
   setKindsFilter: React.Dispatch<React.SetStateAction<{[key: string]:boolean}>>
 }
 
-export const PlacesBar = ({allPlaces, kinds, kindsFilter, setKindsFilter}: Props) => {
+export const PlacesBar = ({allPlaces, kinds, kindsFilter}: Props) => {
 
 
   const placeComponent = ({hD}: {hD: IPlacesHash}) => (
@@ -22,7 +20,7 @@ export const PlacesBar = ({allPlaces, kinds, kindsFilter, setKindsFilter}: Props
         <p className='places__location-name'>{hD.properties.name}</p>
       </div>
       <div className='places__location-image-wrap'>
-        <img className='places__location-image' src={hD.properties.images?.thumb}/>
+        <img className='places__location-image' src={hD.properties.images?.thumb} alt='filter' />
       </div>
     </div>
   )

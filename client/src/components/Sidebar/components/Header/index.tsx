@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
-import logo from './assets/pin-logo.png';
-import { AppContext } from '../../../../lib/utils/context';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faSearch, faHeart, faBars } from '@fortawesome/free-solid-svg-icons'
+import React from 'react';
+// import logo from './assets/pin-logo.png';
+// import { AppContext } from '../../../../lib/utils/context';
+// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+// import { faSearch, faHeart, faBars } from '@fortawesome/free-solid-svg-icons'
 
 export const Header = (): JSX.Element => {
-  const { viewerState } = useContext(AppContext);
+  // const { viewerState } = useContext(AppContext);
 
   return (
     <div className="header" data-testid="header">

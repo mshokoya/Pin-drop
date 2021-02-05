@@ -1,5 +1,5 @@
 import {IPlacesHash, UPlacesHash, IKind, IUnsplash} from '../types';
-import _isEmpty from 'lodash.isempty';
+// import isEmpty from 'lodash.isempty';
 import faker from 'faker';
 
 const NUM_OF_IMAGES = 10;

@@ -1,7 +1,7 @@
-import React, {useEffect, useRef, useState, memo, MutableRefObject} from 'react';
+import React, {useEffect, useRef, useState, MutableRefObject} from 'react';
 import useDeepEffect from '../../lib/utils/hooks/useDeepEffect';
 import {IPos} from './types';
-import {IKind, UPlacesHash, PLACES_HASH_START} from '../../lib/utils/types';
+import {IKind, UPlacesHash} from '../../lib/utils/types';
 import mapboxgl from 'mapbox-gl';
 // @ts-ignore
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
